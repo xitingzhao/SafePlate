@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dnc4tltcmhyet"]
+
+[ext_resource type="Script" uid="uid://d0otyqfd64cfg" path="res://scripts/main_menu.gd" id="1_nl8w3"]
+
+[node name="MainMenu" type="Control" unique_id=1453221976]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nl8w3")
+
+[node name="HBoxContainer" type="VBoxContainer" parent="." unique_id=210917418]
+layout_mode = 0
+offset_right = 347.0
+offset_bottom = 128.0
+
+[node name="GameTitle" type="Label" parent="HBoxContainer" unique_id=600119562]
+layout_mode = 2
+text = "SafePlate"
+
+[node name="StartButton" type="Button" parent="HBoxContainer" unique_id=429060718]
+layout_mode = 2
+text = "Starten"
+
+[node name="AnleitungButton" type="Button" parent="HBoxContainer" unique_id=1908824584]
+layout_mode = 2
+text = "Anleitung"
+
+[node name="EinstellungenButton" type="Button" parent="HBoxContainer" unique_id=1515930531]
+layout_mode = 2
+text = "Einstellungen"
+
+[connection signal="pressed" from="HBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
