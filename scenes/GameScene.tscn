@@ -1,0 +1,169 @@
+[gd_scene format=3 uid="uid://bu0hk4nbxnc42"]
+
+[node name="GameScene" type="Control" unique_id=551222279]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Player1Area" type="Panel" parent="." unique_id=503117175]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.25
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.1415927
+pivot_offset = Vector2(576, 81)
+
+[node name="CartArea1" type="Panel" parent="Player1Area" unique_id=1773066067]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.65
+anchor_top = 0.1
+anchor_right = 0.98
+anchor_bottom = 0.9
+
+[node name="Label" type="Label" parent="Player1Area/CartArea1" unique_id=608560777]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "🛒 Warenkorb Spieler 1
+
+Ziehe Produkte
+in deinen Warenkorb"
+
+[node name="TaskArea1" type="Panel" parent="Player1Area" unique_id=1625188174]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02
+anchor_top = 0.1
+anchor_right = 0.42
+anchor_bottom = 0.9
+
+[node name="Label" type="Label" parent="Player1Area/TaskArea1" unique_id=1970008544]
+layout_mode = 0
+offset_left = 3.959961
+offset_top = 0.80006206
+offset_right = 484.95996
+offset_bottom = 179.80006
+text = "Deine Aufgabe
+
+Du hast eine Laktoseintoleranz.
+Vermeide Produkte
+mit Laktose."
+
+[node name="ProfileArea1" type="Panel" parent="Player1Area" unique_id=1386981218]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45
+anchor_top = 0.1
+anchor_right = 0.62
+anchor_bottom = 0.9
+
+[node name="Label" type="Label" parent="Player1Area/ProfileArea1" unique_id=1528762971]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Dein Profil
+
+Laktosefrei"
+
+[node name="ShelfArea" type="Panel" parent="." unique_id=274192675]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.25
+anchor_right = 1.0
+anchor_bottom = 0.75
+
+[node name="shelfiltlelabel" type="Label" parent="ShelfArea" unique_id=545811429]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 1.0
+offset_right = 618.0
+offset_bottom = 24.0
+text = "Supermarkt-Regal"
+
+[node name="MilchButton" type="Button" parent="ShelfArea" unique_id=502713093]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 66.0
+offset_right = 113.0
+offset_bottom = 187.0
+text = "Milch"
+
+[node name="BrotButton" type="Button" parent="ShelfArea" unique_id=22129162]
+layout_mode = 0
+offset_left = 244.0
+offset_top = 69.0
+offset_right = 286.0
+offset_bottom = 189.0
+text = "Brot"
+
+[node name="ApfelButton" type="Button" parent="ShelfArea" unique_id=237739119]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 71.0
+offset_right = 457.0
+offset_bottom = 191.0
+text = "apfel"
+
+[node name="Player2Area" type="Panel" parent="." unique_id=342504095]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.75
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TaskArea2" type="Panel" parent="Player2Area" unique_id=1009697826]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02
+anchor_top = 0.1
+anchor_right = 0.42
+anchor_bottom = 0.9
+
+[node name="text für Task" type="Label" parent="Player2Area/TaskArea2" unique_id=1958594118]
+layout_mode = 0
+offset_right = 420.96
+offset_bottom = 127.0
+text = "Deine Aufgabe
+
+Du isst vegetarisch.
+Wähle nur Produkte,
+die vegetarisch sind."
+
+[node name="ProfileArea2" type="Panel" parent="Player2Area" unique_id=1358012187]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45
+anchor_top = 0.1
+anchor_right = 0.62
+anchor_bottom = 0.9
+
+[node name="Profiintro" type="Label" parent="Player2Area/ProfileArea2" unique_id=462892201]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Dein Profil
+
+Vegetarisch"
+
+[node name="CartArea2" type="Panel" parent="Player2Area" unique_id=2120119005]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.65
+anchor_top = 0.1
+anchor_right = 0.98
+anchor_bottom = 0.9
+
+[node name="warenkorbtext" type="Label" parent="Player2Area/CartArea2" unique_id=1171562075]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "🛒 Warenkorb Spieler 2
+
+Ziehe Produkte
+in deinen Warenkorb"
