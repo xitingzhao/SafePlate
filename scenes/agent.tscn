@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bvylk6y3ilt8j"]
+
+[ext_resource type="Texture2D" uid="uid://cih21wc603nt5" path="res://icon.svg" id="1_b2pv0"]
+[ext_resource type="Script" uid="uid://bf0v0yks5r7l5" path="res://scripts/agent.gd" id="1_umeaf"]
+
+[node name="Agent" type="Node2D" unique_id=406923337]
+script = ExtResource("1_umeaf")
+
+[node name="AgentSprite" type="Sprite2D" parent="." unique_id=1009393445]
+texture = ExtResource("1_b2pv0")
+
+[node name="SpeechBubble" type="Panel" parent="." unique_id=973575911]
+offset_left = -150.0
+offset_top = -120.0
+offset_right = 150.0
+offset_bottom = -40.0
+
+[node name="DialogLabel" type="Label" parent="SpeechBubble" unique_id=1228801918]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+autowrap_mode = 2
