@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eyqot0afj5mc"
-path="res://.godot/imported/Kuhmilch.png-2abf5b51f118a2c925086bb7df4ef242.ctex"
+uid="uid://beyud6lfxbdbo"
+path="res://.godot/imported/Erdnussriegel.png-9a87eae9f71df49fe03951a39e379fb1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/products/Kuhmilch.png"
-dest_files=["res://.godot/imported/Kuhmilch.png-2abf5b51f118a2c925086bb7df4ef242.ctex"]
+source_file="res://assets/products/Erdnussriegel.png"
+dest_files=["res://.godot/imported/Erdnussriegel.png-9a87eae9f71df49fe03951a39e379fb1.ctex"]
 
 [params]
 

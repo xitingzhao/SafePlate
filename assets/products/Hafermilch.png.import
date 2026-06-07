@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eyqot0afj5mc"
-path="res://.godot/imported/Kuhmilch.png-2abf5b51f118a2c925086bb7df4ef242.ctex"
+uid="uid://bhbcw4di6tbd2"
+path="res://.godot/imported/Hafermilch.png-4b90f222944f424f3f2ceef94facd30a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/products/Kuhmilch.png"
-dest_files=["res://.godot/imported/Kuhmilch.png-2abf5b51f118a2c925086bb7df4ef242.ctex"]
+source_file="res://assets/products/Hafermilch.png"
+dest_files=["res://.godot/imported/Hafermilch.png-4b90f222944f424f3f2ceef94facd30a.ctex"]
 
 [params]
 

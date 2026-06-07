@@ -1,0 +1,72 @@
+[
+  {
+	"id": 1,
+	"name": "Kuhmilch",
+	"image": "Kuhmilch.png",
+	"allergens": ["Laktose"],
+	"tags": ["Vegetarisch", "Glutenfrei"]
+  },
+  {
+	"id": 2,
+	"name": "Hafermilch",
+	"image": "Hafermilch.png",
+	"allergens": ["Gluten"],
+	"tags": ["Vegan", "Vegetarisch", "Laktosefrei"]
+  },
+  {
+	"id": 3,
+	"name": "Vollkornbrot",
+	"image": "Vollkornbrot.png",
+	"allergens": ["Gluten"],
+	"tags": ["Vegan", "Vegetarisch", "Laktosefrei"]
+  },
+  {
+	"id": 4,
+	"name": "Apfel",
+	"image": "Apfel.png",
+	"allergens": [],
+	"tags": ["Vegan", "Vegetarisch", "Glutenfrei", "Laktosefrei"]
+  },
+  {
+	"id": 5,
+	"name": "Erdnussriegel",
+	"image": "Erdnussriegel.png",
+	"allergens": ["Erdnüsse"],
+	"tags": ["Vegan" ,"Vegetarisch", "Glutenfrei", "Laktosefrei"]
+  },
+  {
+	"id": 6,
+	"name": "Joghurt",
+	"image": "Joghurt.png",
+	"allergens": ["Laktose"],
+	"tags": ["Vegetarisch", "Glutenfrei"]
+  },
+  {
+	"id": 7,
+	"name": "Tofu",
+	"image": "Tofu.png",
+	"allergens": ["Soja"],
+	"tags": ["Vegan", "Vegetarisch", "Glutenfrei", "Laktosefrei"]
+  },
+  {
+	"id": 8,
+	"name": "Käse",
+	"image": "Käse.png",
+	"allergens": ["Laktose"],
+	"tags": ["Vegetarisch", "Glutenfrei"]
+  },
+  {
+	"id": 9,
+	"name": "Nudeln",
+	"image": "Nudeln.png",
+	"allergens": ["Gluten"],
+	"tags": ["Vegan", "Vegetarisch", "Laktosefrei"]
+  },
+  {
+	"id": 10,
+	"name": "Ei",
+	"image": "Ei.png",
+	"allergens": [],
+	"tags": ["Vegetarisch", "Glutenfrei", "Laktosefrei"]
+  }
+]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eyqot0afj5mc"
-path="res://.godot/imported/Kuhmilch.png-2abf5b51f118a2c925086bb7df4ef242.ctex"
+uid="uid://c234a26it4ef6"
+path="res://.godot/imported/Tofu.png-c469ef08b6d542deb5c1b600705add3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/products/Kuhmilch.png"
-dest_files=["res://.godot/imported/Kuhmilch.png-2abf5b51f118a2c925086bb7df4ef242.ctex"]
+source_file="res://assets/products/Tofu.png"
+dest_files=["res://.godot/imported/Tofu.png-c469ef08b6d542deb5c1b600705add3b.ctex"]
 
 [params]
 

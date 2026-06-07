@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eyqot0afj5mc"
-path="res://.godot/imported/Kuhmilch.png-2abf5b51f118a2c925086bb7df4ef242.ctex"
+uid="uid://dk5q462e2ugqh"
+path="res://.godot/imported/Joghurt.png-9396f35290a1ea5543a1dc4b993efea9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/products/Kuhmilch.png"
-dest_files=["res://.godot/imported/Kuhmilch.png-2abf5b51f118a2c925086bb7df4ef242.ctex"]
+source_file="res://assets/products/Joghurt.png"
+dest_files=["res://.godot/imported/Joghurt.png-9396f35290a1ea5543a1dc4b993efea9.ctex"]
 
 [params]
 
