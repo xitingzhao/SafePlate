@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cx8fvn1j3fmjg"]
+
+[ext_resource type="Script" uid="uid://cgj6wi71te7yg" path="res://scripts/product.gd" id="1_g1k5g"]
+[ext_resource type="Texture2D" uid="uid://q6kwycu0l4lg" path="res://assets/products/Kuhmilch.png" id="2_mhi5l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h6i1d"]
+size = Vector2(209, 521)
+
+[node name="Product" type="Node2D" unique_id=191741646]
+script = ExtResource("1_g1k5g")
+product_id = 1
+product_name = "Kuhmilch"
+allergens = Array[String](["Laktose"])
+tags = Array[String](["vegetarisch", "glutenfrei"])
+
+[node name="ProductSprite" type="Sprite2D" parent="." unique_id=218344518]
+texture = ExtResource("2_mhi5l")
+
+[node name="NameLabel" type="Label" parent="." unique_id=1706130462]
+offset_left = -99.0
+offset_top = 268.0
+offset_right = 105.0
+offset_bottom = 291.0
+text = "Kuhmilch"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1151108550]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_h6i1d")
