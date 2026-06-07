@@ -66,13 +66,18 @@ anchor_top = 0.1
 anchor_right = 0.62
 anchor_bottom = 0.9
 
-[node name="Label" type="Label" parent="Player1Area/ProfileArea1" unique_id=1528762971]
+[node name="VBoxContainer" type="VBoxContainer" parent="Player1Area/ProfileArea1" unique_id=697733555]
 layout_mode = 0
 offset_right = 40.0
-offset_bottom = 23.0
-text = "Dein Profil
+offset_bottom = 40.0
 
-Laktosefrei"
+[node name="ProfilInfoTitle" type="Label" parent="Player1Area/ProfileArea1/VBoxContainer" unique_id=1528762971]
+layout_mode = 2
+text = "Dein Profil"
+
+[node name="ProfilArt" type="Label" parent="Player1Area/ProfileArea1/VBoxContainer" unique_id=1046606919]
+layout_mode = 2
+text = "vegan"
 
 [node name="ShelfArea" type="Panel" parent="." unique_id=274192675]
 layout_mode = 1
@@ -146,13 +151,18 @@ anchor_top = 0.1
 anchor_right = 0.62
 anchor_bottom = 0.9
 
-[node name="Profiintro" type="Label" parent="Player2Area/ProfileArea2" unique_id=462892201]
+[node name="VBoxContainer" type="VBoxContainer" parent="Player2Area/ProfileArea2" unique_id=1298669415]
 layout_mode = 0
 offset_right = 40.0
-offset_bottom = 23.0
-text = "Dein Profil
+offset_bottom = 40.0
 
-Vegetarisch"
+[node name="ProfiintroTitle" type="Label" parent="Player2Area/ProfileArea2/VBoxContainer" unique_id=462892201]
+layout_mode = 2
+text = "Dein Profil"
+
+[node name="ProflArt" type="Label" parent="Player2Area/ProfileArea2/VBoxContainer" unique_id=1988563634]
+layout_mode = 2
+text = "vegetarisch"
 
 [node name="CartArea2" type="Panel" parent="Player2Area" unique_id=2120119005]
 layout_mode = 1
