@@ -14,4 +14,4 @@ func _process(delta: float) -> void:
 func _on_start_button_pressed() -> void:
 	GameGlobal.player1 = $VBoxContainer/S1Panel/S1OptionButton.get_item_text($VBoxContainer/S1Panel/S1OptionButton.selected)
 	GameGlobal.player2 = $VBoxContainer/S2Panel/S2OptionButton.get_item_text($VBoxContainer/S2Panel/S2OptionButton.selected)
-	get_tree().change_scene_to_file("res://scenes/game/Game.tscn")
+	get_tree().change_scene_to_file("res://scenes/game/GameScene.tscn")

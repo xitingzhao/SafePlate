@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bu0hk4nbxnc42"]
 
+[ext_resource type="Script" uid="uid://1p2pxn6yrm0g" path="res://scripts/game_scene.gd" id="1_2stm1"]
+
 [node name="GameScene" type="Control" unique_id=551222279]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2stm1")
 
 [node name="Player1Area" type="Panel" parent="." unique_id=503117175]
 layout_mode = 1
