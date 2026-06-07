@@ -1,14 +1,9 @@
 extends Control
 
 func _ready() -> void:
-	show_info({
-		"name": "Hafermilch",
-		"inhaltsstoffe": "Wasser, Hafer 10%",
-		"allergene": "Gluten",
-		"siegel": "vegan"
-	})
+	hide()
 
-func show_info(product: Dictionary):
+func show_info(product: Dictionary) -> void:
 	$Panel/VBoxContainer/LabelName.text = product["name"]
 	$Panel/VBoxContainer/LabelInhaltsstoffe.text = "Inhaltsstoffe: " + product["inhaltsstoffe"]
 	$Panel/VBoxContainer/LabelAllergene.text = "Allergene: " + product["allergene"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://7fufwcbpn72b" path="res://scripts/product_info.gd" id="1_tfrkw"]
 
-[node name="ProductInfo" type="Control"]
+[node name="ProductInfo" type="Control" unique_id=1250334183]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,7 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tfrkw")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=741066439]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -25,7 +25,7 @@ offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=692274602]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -37,22 +37,22 @@ offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="LabelName" type="Label" parent="Panel/VBoxContainer"]
+[node name="LabelName" type="Label" parent="Panel/VBoxContainer" unique_id=88678773]
 layout_mode = 2
 text = "Produktname"
 
-[node name="LabelInhaltsstoffe" type="Label" parent="Panel/VBoxContainer"]
+[node name="LabelInhaltsstoffe" type="Label" parent="Panel/VBoxContainer" unique_id=1475395026]
 layout_mode = 2
 autowrap_mode = 3
 
-[node name="LabelAllergene" type="Label" parent="Panel/VBoxContainer"]
+[node name="LabelAllergene" type="Label" parent="Panel/VBoxContainer" unique_id=71456064]
 layout_mode = 2
 autowrap_mode = 3
 
-[node name="LabelSiegel" type="Label" parent="Panel/VBoxContainer"]
+[node name="LabelSiegel" type="Label" parent="Panel/VBoxContainer" unique_id=1878814348]
 layout_mode = 2
 
-[node name="CloseButton" type="Button" parent="Panel/VBoxContainer"]
+[node name="CloseButton" type="Button" parent="Panel/VBoxContainer" unique_id=371807179]
 layout_mode = 2
 text = "Schließen"
 
