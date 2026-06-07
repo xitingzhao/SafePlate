@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://jnfhq6qstw1v"]
+
+[ext_resource type="Script" uid="uid://dm4ddvgp3o77i" path="res://scripts/profilauswahl.gd" id="1_yrv5n"]
+
+[node name="Profilauswahl" type="Control" unique_id=1626076075]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yrv5n")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=588673427]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Profile Auswahl" type="Label" parent="VBoxContainer" unique_id=2123979508]
+layout_mode = 2
+text = "Profile Auswahl"
+
+[node name="S1Panel" type="PanelContainer" parent="VBoxContainer" unique_id=691595062]
+layout_mode = 2
+
+[node name="Spieler 1" type="Label" parent="VBoxContainer/S1Panel" unique_id=416420133]
+layout_mode = 2
+text = "Spieler 1"
+
+[node name="S1OptionButton" type="OptionButton" parent="VBoxContainer/S1Panel" unique_id=940425945]
+layout_mode = 2
+item_count = 4
+popup/item_0/text = "Vegan"
+popup/item_0/id = 1
+popup/item_1/text = "vegetarisch"
+popup/item_1/id = 2
+popup/item_2/text = "glutenfrei"
+popup/item_2/id = 3
+popup/item_3/text = "laktosefrei"
+popup/item_3/id = 4
+
+[node name="S2Panel" type="PanelContainer" parent="VBoxContainer" unique_id=741720402]
+layout_mode = 2
+
+[node name="Spieler 2" type="Label" parent="VBoxContainer/S2Panel" unique_id=123184595]
+layout_mode = 2
+text = "Spieler 2"
+
+[node name="S2OptionButton" type="OptionButton" parent="VBoxContainer/S2Panel" unique_id=1688652647]
+layout_mode = 2
+item_count = 4
+popup/item_0/text = "Vegan"
+popup/item_0/id = 1
+popup/item_1/text = "Vegetarisch"
+popup/item_1/id = 2
+popup/item_2/text = "glutenfrei"
+popup/item_2/id = 3
+popup/item_3/text = "laktosefrei"
+popup/item_3/id = 4
+
+[node name="StartButton" type="Button" parent="VBoxContainer" unique_id=1793563096]
+layout_mode = 2
+text = "Starten"
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]

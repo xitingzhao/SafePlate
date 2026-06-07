@@ -14,6 +14,10 @@ config/name="SafePlate"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameGlobal="*uid://d0l3jpp084pol"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

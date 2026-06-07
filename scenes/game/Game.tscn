@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dape62867vrku"]
+
+[ext_resource type="Script" uid="uid://bp5qyq0qrq5m0" path="res://scripts/game.gd" id="1_klkup"]
+
+[node name="Game" type="Node2D" unique_id=1224900319]
+script = ExtResource("1_klkup")
+
+[node name="Game" type="Label" parent="." unique_id=777925419]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Game"
