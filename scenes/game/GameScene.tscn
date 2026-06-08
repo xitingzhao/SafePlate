@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bu0hk4nbxnc42"]
 
 [ext_resource type="Script" uid="uid://1p2pxn6yrm0g" path="res://scripts/game_scene.gd" id="1_2stm1"]
+[ext_resource type="PackedScene" uid="uid://cewnebifuw5xs" path="res://scenes/agent.tscn" id="2_ldxrm"]
+[ext_resource type="Texture2D" uid="uid://bpm3bvftox6vd" path="res://assets/agent_sprite_blue.png" id="3_vaave"]
 
 [node name="GameScene" type="Control" unique_id=551222279]
 layout_mode = 3
@@ -48,10 +50,10 @@ anchor_bottom = 0.9
 
 [node name="Label" type="Label" parent="Player1Area/TaskArea1" unique_id=1970008544]
 layout_mode = 0
-offset_left = 3.959961
-offset_top = 0.80006206
-offset_right = 484.95996
-offset_bottom = 179.80006
+offset_left = 219.95996
+offset_top = -1.1999569
+offset_right = 482.05994
+offset_bottom = 177.80005
 text = "Deine Aufgabe
 
 Du hast eine Laktoseintoleranz.
@@ -135,8 +137,10 @@ anchor_bottom = 0.9
 
 [node name="text für Task" type="Label" parent="Player2Area/TaskArea2" unique_id=1958594118]
 layout_mode = 0
-offset_right = 420.96
-offset_bottom = 127.0
+offset_left = 286.96002
+offset_top = -3.2000122
+offset_right = 446.96002
+offset_bottom = 123.79999
 text = "Deine Aufgabe
 
 Du isst vegetarisch.
@@ -180,3 +184,18 @@ text = "🛒 Warenkorb Spieler 2
 
 Ziehe Produkte
 in deinen Warenkorb"
+
+[node name="AgentBlue" parent="." unique_id=1763482887 instance=ExtResource("2_ldxrm")]
+position = Vector2(120, 520)
+scale = Vector2(0.25, 0.25)
+
+[node name="AgentSprite" parent="AgentBlue" index="0" unique_id=458173963]
+texture = ExtResource("3_vaave")
+
+[node name="AgentOrange" parent="." unique_id=1737455097 instance=ExtResource("2_ldxrm")]
+position = Vector2(1032, 135)
+rotation = 3.107037
+scale = Vector2(0.25, 0.25)
+
+[editable path="AgentBlue"]
+[editable path="AgentOrange"]

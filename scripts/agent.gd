@@ -29,10 +29,10 @@ func apply_side_style(side: String) -> void:
 	var sprite := $AgentSprite as Sprite2D
 	match side:
 		"S1", "blue":
-			sprite.modulate = Color(0.3, 0.6, 1.0)
+			#sprite.modulate = Color(0.3, 0.6, 1.0)
 			sprite.scale = Vector2.ONE
 			$SpeechBubble.position = Vector2(-150, -130)
 		"S2", "orange":
-			sprite.modulate = Color(1.0, 0.6, 0.2)
-			sprite.scale = Vector2(-1, -1)
+			#sprite.modulate = Color(1.0, 0.6, 0.2)
+			sprite.scale = Vector2.ONE
 			$SpeechBubble.position = Vector2(-150, 130)
