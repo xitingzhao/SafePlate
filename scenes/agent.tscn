@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bvylk6y3ilt8j"]
+
+[ext_resource type="Texture2D" uid="uid://cm7f8jir8k3jd" path="res://assets/agent_sprite.png" id="1_sprite"]
+[ext_resource type="Script" uid="uid://bf0v0yks5r7l5" path="res://scripts/agent.gd" id="2_script"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bubble"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(1, 1, 1, 0.95)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 0.2, 0.2, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Agent" type="Node2D" unique_id=1763482887]
+script = ExtResource("2_script")
+
+[node name="AgentSprite" type="Sprite2D" parent="." unique_id=458173963]
+texture = ExtResource("1_sprite")
+
+[node name="SpeechBubble" type="Panel" parent="." unique_id=1017851565]
+offset_left = -150.0
+offset_top = -130.0
+offset_right = 150.0
+offset_bottom = -30.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bubble")
+
+[node name="DialogLabel" type="Label" parent="SpeechBubble" unique_id=1944315103]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
+theme_override_font_sizes/font_size = 16
+text = "..."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
