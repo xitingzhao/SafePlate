@@ -22,6 +22,12 @@ func _ready() -> void:
 func check_round_end():
 
 	if GameGlobal.evaluated_products >= TOTAL_PRODUCTS:
+
+		AgentSetup.notify_round_end(agent_blue)
+		AgentSetup.notify_round_end(agent_orange)
+
+		await get_tree().create_timer(1.0).timeout
+
 		get_tree().change_scene_to_file(
 			"res://scenes/EndScreen.tscn"
 		)
@@ -35,8 +41,10 @@ func evaluate_player1(product_data: Dictionary):
 
 	if result.correct:
 		GameGlobal.player1_correct += 1
+		AgentSetup.notify_correct(agent_blue)
 	else:
 		GameGlobal.player1_wrong += 1
+		AgentSetup.notify_wrong(agent_blue, result.message)
 
 	GameGlobal.evaluated_products += 1
 
@@ -57,8 +65,10 @@ func evaluate_player2(product_data: Dictionary):
 
 	if result.correct:
 		GameGlobal.player2_correct += 1
+		AgentSetup.notify_correct(agent_orange)
 	else:
 		GameGlobal.player2_wrong += 1
+		AgentSetup.notify_wrong(agent_orange, result.message)
 
 	GameGlobal.evaluated_products += 1
 

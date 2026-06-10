@@ -2,6 +2,15 @@
 
 [ext_resource type="Script" uid="uid://dbfj1j4m3th6t" path="res://scripts/endscreen.gd" id="1_anw2l"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_anw2l"]
+font_size = 61
+
+[sub_resource type="LabelSettings" id="LabelSettings_bbdxr"]
+font_size = 22
+
+[sub_resource type="LabelSettings" id="LabelSettings_iwr8q"]
+font_size = 22
+
 [node name="Endscreen" type="Control" unique_id=623907282]
 layout_mode = 3
 anchors_preset = 0
@@ -9,29 +18,44 @@ script = ExtResource("1_anw2l")
 
 [node name="TitleLabel" type="Label" parent="." unique_id=1590967333]
 layout_mode = 0
-offset_left = 302.0
-offset_top = 48.0
-offset_right = 847.0
-offset_bottom = 171.0
+offset_left = 307.0
+offset_top = 38.0
+offset_right = 832.0
+offset_bottom = 168.0
+text = "Spiel beendet!"
+label_settings = SubResource("LabelSettings_anw2l")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Player1Label" type="Label" parent="." unique_id=643664190]
 layout_mode = 0
-offset_left = 144.0
+offset_left = 252.0
 offset_top = 299.0
-offset_right = 385.0
+offset_right = 493.0
 offset_bottom = 417.0
+text = "Spieler 1
+Richtig:
+Falsch:"
+label_settings = SubResource("LabelSettings_bbdxr")
+vertical_alignment = 1
 
 [node name="Player2Label" type="Label" parent="." unique_id=387917962]
 layout_mode = 0
-offset_left = 750.0
-offset_top = 304.0
-offset_right = 972.0
-offset_bottom = 427.0
+offset_left = 770.0
+offset_top = 299.0
+offset_right = 992.0
+offset_bottom = 422.0
+text = "Spieler 2
+Richtig:
+Falsch:"
+label_settings = SubResource("LabelSettings_iwr8q")
+vertical_alignment = 1
 
 [node name="ReplayButton" type="Button" parent="." unique_id=656016647]
 layout_mode = 0
-offset_left = 497.0
-offset_top = 464.0
-offset_right = 680.0
-offset_bottom = 537.0
+offset_left = 470.0
+offset_top = 470.0
+offset_right = 653.0
+offset_bottom = 543.0
 action_mode = 0
+text = "Nochmal Spielen"
