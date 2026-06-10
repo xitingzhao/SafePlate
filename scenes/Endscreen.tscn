@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cp16sq4sgi1mw"]
+
+[ext_resource type="Script" uid="uid://dbfj1j4m3th6t" path="res://scripts/endscreen.gd" id="1_anw2l"]
+
+[node name="Endscreen" type="Control" unique_id=623907282]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_anw2l")
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1590967333]
+layout_mode = 0
+offset_left = 302.0
+offset_top = 48.0
+offset_right = 847.0
+offset_bottom = 171.0
+
+[node name="Player1Label" type="Label" parent="." unique_id=643664190]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 299.0
+offset_right = 385.0
+offset_bottom = 417.0
+
+[node name="Player2Label" type="Label" parent="." unique_id=387917962]
+layout_mode = 0
+offset_left = 750.0
+offset_top = 304.0
+offset_right = 972.0
+offset_bottom = 427.0
+
+[node name="ReplayButton" type="Button" parent="." unique_id=656016647]
+layout_mode = 0
+offset_left = 497.0
+offset_top = 464.0
+offset_right = 680.0
+offset_bottom = 537.0
+action_mode = 0

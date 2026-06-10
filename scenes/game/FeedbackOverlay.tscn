@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c3180rqva4alq"]
+
+[ext_resource type="Script" uid="uid://bk7d4nfbigqnp" path="res://scripts/feedback_overlay.gd" id="1_dumxq"]
+
+[node name="FeedbackOverlay" type="CanvasLayer" unique_id=1924975418]
+script = ExtResource("1_dumxq")
+
+[node name="Panel" type="Panel" parent="." unique_id=2112077177]
+offset_left = 1.0
+offset_right = 384.0
+offset_bottom = 121.0
+
+[node name="Label" type="Label" parent="Panel" unique_id=1744311316]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 12.0
+offset_right = 367.0
+offset_bottom = 110.0
