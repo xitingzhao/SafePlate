@@ -25,5 +25,5 @@ func _on_replay_button_pressed():
 	GameGlobal.reset_game()
 
 	get_tree().change_scene_to_file(
-		"res://scenes/ProfileSelection.tscn"
+		"res://scenes/menu/profilauswahl.tscn"
 	)
