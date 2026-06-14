@@ -1,34 +1,38 @@
 extends Area2D
 
-@export var product_id: int = 0
-@export var product_name: String = ""
-@export var allergens: Array[String] = []
-@export var tags: Array[String] = []
+var product_id: int = 0
+var product_name: String = ""
+var ingredients: String = ""
+var allergens: Array = []
+var tags: Array = []
 
-@onready var name_label: Label = $NameLabel
+var product_data: Dictionary = {}
+var product_info: Control = null
 
 var dragging := false
-var active_touch_index := -1
 var drag_offset := Vector2.ZERO
-var start_position := Vector2.ZERO
 
-func _ready() -> void:
-	name_label.text = product_name
-	start_position = global_position
+@onready var sprite: Sprite2D = $ProductSprite
+@onready var name_label: Label = $NameLabel
 
-func _input_event(viewport, event, shape_idx) -> void:
-	if event is InputEventScreenTouch:
-		if event.pressed and not dragging:
-			dragging = true
-			active_touch_index = event.index
-			drag_offset = global_position - event.position
-			z_index = 10
+func setup(data: Dictionary) -> void:
+	product_data = data
 
-		elif not event.pressed and event.index == active_touch_index:
-			dragging = false
-			active_touch_index = -1
-			z_index = 0
+	name_label.text = data.get("name", "")
 
-	if event is InputEventScreenDrag:
-		if dragging and event.index == active_touch_index:
-			global_position = event.position + drag_offset
+	if data.has("image"):
+		var path: String = "res://assets/products/" + str(data["image"])
+		sprite.texture = load(path) as Texture2D
+		sprite.scale = Vector2(0.15, 0.15)
+
+	name_label.position = Vector2(-50, 55)
+	name_label.size = Vector2(100, 30)
+	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	name_label.z_index = 10
+
+func bind_product_info(info: Control) -> void:
+	product_info = info
+
+func is_mouse_over() -> bool:
+	var mouse_pos := get_global_mouse_position()
+	return global_position.distance_to(mouse_pos) < 100
