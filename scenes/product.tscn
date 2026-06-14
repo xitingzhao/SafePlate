@@ -1,40 +1,23 @@
 [gd_scene format=3 uid="uid://cx8fvn1j3fmjg"]
 
+[ext_resource type="Script" uid="uid://cgj6wi71te7yg" path="res://scripts/product.gd" id="1_g1k5g"]
 [ext_resource type="Texture2D" uid="uid://eyqot0afj5mc" path="res://assets/products/Kuhmilch.png" id="2_mhi5l"]
-
-[sub_resource type="GDScript" id="GDScript_dj5ci"]
-script/source = "extends Node2D
-
-@export var product_id: int = 0
-@export var product_name: String = \"\"
-
-@export var allergens: Array[String] = []
-@export var tags: Array[String] = []
-
-@onready var name_label = $NameLabel
-
-func _ready():
-	name_label.text = product_name
-"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h6i1d"]
 size = Vector2(209, 521)
 
 [node name="Product" type="Area2D" unique_id=1548249346]
-script = SubResource("GDScript_dj5ci")
-product_id = 1
-product_name = "Kuhmilch"
-allergens = Array[String](["Laktose"])
-tags = Array[String](["vegetarisch", "glutenfrei"])
+script = ExtResource("1_g1k5g")
 
 [node name="ProductSprite" type="Sprite2D" parent="." unique_id=218344518]
 texture = ExtResource("2_mhi5l")
 
 [node name="NameLabel" type="Label" parent="." unique_id=1706130462]
-offset_left = -99.0
-offset_top = 268.0
-offset_right = 105.0
-offset_bottom = 291.0
+offset_left = -50.0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 80.0
+mouse_filter = 0
 text = "Kuhmilch"
 horizontal_alignment = 1
 

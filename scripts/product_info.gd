@@ -5,9 +5,9 @@ func _ready() -> void:
 
 func show_info(product: Dictionary) -> void:
 	$Panel/VBoxContainer/LabelName.text = product["name"]
-	$Panel/VBoxContainer/LabelInhaltsstoffe.text = "Inhaltsstoffe: " + product["inhaltsstoffe"]
-	$Panel/VBoxContainer/LabelAllergene.text = "Allergene: " + product["allergene"]
-	$Panel/VBoxContainer/LabelSiegel.text = "Siegel: " + product["siegel"]
+	$Panel/VBoxContainer/LabelInhaltsstoffe.text = "Inhaltsstoffe: " + product["ingredients"]
+	$Panel/VBoxContainer/LabelAllergene.text = "Allergene: " + ", ".join(product["allergens"])
+	$Panel/VBoxContainer/LabelSiegel.text = "Tags: " + ", ".join(product["tags"])
 	show()
 
 func _on_close_button_pressed() -> void:
