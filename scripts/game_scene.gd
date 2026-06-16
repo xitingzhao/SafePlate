@@ -4,6 +4,8 @@ extends Control
 @onready var agent_orange: Node2D = $AgentOrange
 @onready var product_info: Control = $ProductInfo
 @onready var shelf_area: Node = $ShelfArea
+@onready var cart_area_1: Control = $Player1Area/CartArea1
+@onready var cart_area_2: Control = $Player2Area/CartArea2
 
 var product_scene := preload("res://scenes/product.tscn")
 
@@ -43,6 +45,7 @@ func load_products_from_json() -> void:
 
 	for product_data in products:
 		var product = product_scene.instantiate()
+		product.name = str(product_data.get("name", "Produkt"))
 		shelf_area.add_child(product)
 
 		product.z_index = 5
@@ -82,5 +85,22 @@ func _input(event: InputEvent) -> void:
 		else:
 			if dragged_product != null:
 				print("DRAG STOP")
+				check_cart_drop(dragged_product)
 				dragged_product.z_index = 5
 				dragged_product = null
+
+func check_cart_drop(product: Node2D) -> void:
+	if is_inside_control(product.global_position, cart_area_1):
+		print("Produkt liegt im Warenkorb von Spieler 1: ", product.name)
+		return
+
+	if is_inside_control(product.global_position, cart_area_2):
+		print("Produkt liegt im Warenkorb von Spieler 2: ", product.name)
+		return
+
+	print("Produkt wurde in keinen Warenkorb gelegt")
+	
+func is_inside_control(global_pos: Vector2, control: Control) -> bool:
+	var local_pos := control.get_global_transform().affine_inverse() * global_pos
+	var rect := Rect2(Vector2.ZERO, control.size)
+	return rect.has_point(local_pos)
