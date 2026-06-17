@@ -143,12 +143,12 @@ func check_cart_drop(product: Node2D) -> void:
 
 	if in_cart_1:
 		add_to_cart(product, cart_area_1_products)
-		evaluate_live(GameGlobal.player1, product.product_data, agent_blue)
+		evaluate_live(GameGlobal.player1, product.product_data, agent_orange)
 		return
 
 	if in_cart_2:
 		add_to_cart(product, cart_area_2_products)
-		evaluate_live(GameGlobal.player2, product.product_data, agent_orange)
+		evaluate_live(GameGlobal.player2, product.product_data, agent_blue)
 		return
 	
 func is_inside_control(global_pos: Vector2, control: Control) -> bool:
