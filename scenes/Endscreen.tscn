@@ -59,3 +59,21 @@ offset_right = 653.0
 offset_bottom = 543.0
 action_mode = 0
 text = "Nochmal Spielen"
+
+[node name="Label" type="Label" parent="." unique_id=1410819779]
+layout_mode = 0
+offset_left = 252.0
+offset_top = 272.0
+offset_right = 292.0
+offset_bottom = 295.0
+text = "Spieler 1"
+
+[node name="Label2" type="Label" parent="." unique_id=1533842367]
+layout_mode = 0
+offset_left = 770.0
+offset_top = 272.0
+offset_right = 810.0
+offset_bottom = 295.0
+text = "Spieler 2"
+
+[connection signal="pressed" from="ReplayButton" to="." method="_on_replay_button_pressed"]

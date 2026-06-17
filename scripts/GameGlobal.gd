@@ -11,7 +11,7 @@ var player1_wrong = 0
 var player2_correct = 0
 var player2_wrong = 0
 
-var evaluated_products = 0
+var evaluated_products = 0 # Anzahl aller bewerteten Drops
 
 func reset_game():
 	player1_correct = 0

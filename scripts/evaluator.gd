@@ -7,26 +7,32 @@ static func check_product(profile: String, product_data: Dictionary) -> Dictiona
 		"message": ""
 	}
 
-	if product_data["tags"].has(profile):
-		result.correct = true
-		result.message = "Richtig, " + product_data["name"] + " passt zu " + profile + "."
+	var profile_norm := profile.strip_edges().to_lower()
+
+	var tags := []
+	for t in product_data["tags"]:
+		tags.append(t.strip_edges().to_lower())
+
+	if tags.has(profile_norm):
+		result["correct"] = true
+		result["message"] = "Richtig, %s passt zu %s." % [product_data["name"], profile]
 		return result
 
-	match profile:
+	match profile_norm:
 
-		"Vegan":
-			result.message = "Falsch " + product_data["name"] + " ist nicht vegan."
+		"vegan":
+			result["message"] = "Falsch %s ist nicht vegan." % product_data["name"]
 
-		"Vegetarisch":
-			result.message = "Falsch " + product_data["name"] + " ist nicht vegetarisch."
+		"vegetarisch":
+			result["message"] = "Falsch %s ist nicht vegetarisch." % product_data["name"]
 
-		"Glutenfrei":
-			result.message = "Falsch, Enthält Gluten."
+		"glutenfrei":
+			result["message"] = "Falsch, enthält Gluten."
 
-		"Laktosefrei":
-			result.message = "Falsch, Enthält Laktose."
+		"laktosefrei":
+			result["message"] = "Falsch, enthält Laktose."
 
 		_:
-			result.message = "Falsch, Produkt ungeeignet."
+			result["message"] = "Falsch, Produkt ungeeignet."
 
 	return result

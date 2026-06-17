@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cewnebifuw5xs" path="res://scenes/agent.tscn" id="2_ldxrm"]
 [ext_resource type="Texture2D" uid="uid://bpm3bvftox6vd" path="res://assets/agent_sprite_blue.png" id="3_vaave"]
 [ext_resource type="PackedScene" uid="uid://bl12hj158277" path="res://scenes/product_info.tscn" id="4_b1len"]
+[ext_resource type="PackedScene" uid="uid://c3180rqva4alq" path="res://scenes/game/FeedbackOverlay.tscn" id="5_gs0nk"]
 
 [node name="GameScene" type="Control" unique_id=551222279]
 layout_mode = 3
@@ -191,6 +192,18 @@ scale = Vector2(0.25, 0.25)
 
 [node name="ProductInfo" parent="." unique_id=1250334183 instance=ExtResource("4_b1len")]
 layout_mode = 1
+
+[node name="FeedbackOverlay" parent="." unique_id=1924975418 instance=ExtResource("5_gs0nk")]
+
+[node name="EndButton" type="Button" parent="." unique_id=1899263545]
+layout_mode = 0
+offset_left = 1048.0
+offset_top = 329.0
+offset_right = 1140.0
+offset_bottom = 360.0
+text = "Auswerten"
+
+[connection signal="pressed" from="EndButton" to="." method="_on_end_button_pressed"]
 
 [editable path="AgentBlue"]
 [editable path="AgentOrange"]
