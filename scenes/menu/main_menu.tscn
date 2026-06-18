@@ -1,6 +1,39 @@
 [gd_scene format=3 uid="uid://dnc4tltcmhyet"]
 
 [ext_resource type="Script" uid="uid://d0otyqfd64cfg" path="res://scripts/main_menu.gd" id="1_nl8w3"]
+[ext_resource type="Texture2D" uid="uid://iila5beteff7" path="res://assets/background/Hintergrund.jpg" id="2_247la"]
+[ext_resource type="FontFile" uid="uid://bwguuv1ped2cn" path="res://assets/font/Brown Cookies.otf" id="3_kiqgm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hj162"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xn6kt"]
+bg_color = Color(0.16442195, 0.4020051, 0.13462076, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_isoef"]
+bg_color = Color(0.30047327, 0.6951593, 0.40562546, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_247la"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kiqgm"]
+bg_color = Color(0.16470589, 0.40392157, 0.13333334, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qgo02"]
+bg_color = Color(0.3019608, 0.69411767, 0.40392157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vovv2"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1k4da"]
+bg_color = Color(0.16470589, 0.40392157, 0.13333334, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bbqo6"]
+bg_color = Color(0.3019608, 0.69411767, 0.40392157, 1)
 
 [node name="MainMenu" type="Control" unique_id=1453221976]
 layout_mode = 3
@@ -11,25 +44,66 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nl8w3")
 
-[node name="HBoxContainer" type="VBoxContainer" parent="." unique_id=210917418]
-layout_mode = 0
-offset_right = 347.0
-offset_bottom = 128.0
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2079298775]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_247la")
+expand_mode = 1
 
-[node name="GameTitle" type="Label" parent="HBoxContainer" unique_id=600119562]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1706562132]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=767265148]
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="GameTitle" type="Label" parent="MarginContainer/VBoxContainer" unique_id=600119562]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2049, 0.71129906, 0.29549643, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_kiqgm")
+theme_override_font_sizes/font_size = 80
 text = "SafePlate"
+horizontal_alignment = 1
 
-[node name="StartButton" type="Button" parent="HBoxContainer" unique_id=429060718]
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=429060718]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_kiqgm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hj162")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xn6kt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_isoef")
 text = "Starten"
 
-[node name="AnleitungButton" type="Button" parent="HBoxContainer" unique_id=1908824584]
+[node name="AnleitungButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1908824584]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_kiqgm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_247la")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kiqgm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qgo02")
 text = "Anleitung"
 
-[node name="EinstellungenButton" type="Button" parent="HBoxContainer" unique_id=1515930531]
+[node name="EinstellungenButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1515930531]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_kiqgm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vovv2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1k4da")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bbqo6")
 text = "Einstellungen"
 
-[connection signal="pressed" from="HBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
