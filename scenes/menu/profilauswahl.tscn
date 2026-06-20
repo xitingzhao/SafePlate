@@ -1,6 +1,19 @@
 [gd_scene format=3 uid="uid://jnfhq6qstw1v"]
 
 [ext_resource type="Script" uid="uid://dm4ddvgp3o77i" path="res://scripts/profilauswahl.gd" id="1_yrv5n"]
+[ext_resource type="Texture2D" uid="uid://deunkw3i43ppr" path="res://assets/background/Hintergrund2.jpg" id="2_bkem7"]
+[ext_resource type="ButtonGroup" uid="uid://cg10fuu0eul57" path="res://assets/Auswahlbild/player1_select_group.tres" id="3_8vclp"]
+[ext_resource type="Texture2D" uid="uid://b8jly1mq4joeu" path="res://assets/Auswahlbild/vegan.jpg" id="3_kt1q3"]
+[ext_resource type="Texture2D" uid="uid://bayg24m4llvxx" path="res://assets/Auswahlbild/vegetarisch.jpg" id="4_q4x10"]
+[ext_resource type="Texture2D" uid="uid://cv2nn5ahlygm3" path="res://assets/Auswahlbild/laktosefrei.jpg" id="5_8vclp"]
+[ext_resource type="Texture2D" uid="uid://bb0e05nebejbu" path="res://assets/Auswahlbild/glutenfrei.jpg" id="6_f22dl"]
+[ext_resource type="ButtonGroup" uid="uid://dxi8iyv5qo1le" path="res://assets/Auswahlbild/player2_select_group.tres" id="8_f22dl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2hfu"]
+bg_color = Color(0.7294118, 0.1764706, 0.16470589, 0.47058824)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fbst4"]
+bg_color = Color(0.33107495, 0.62596744, 0.8722371, 0.47058824)
 
 [node name="Profilauswahl" type="Control" unique_id=1626076075]
 layout_mode = 3
@@ -11,55 +24,168 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yrv5n")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=588673427]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1035713]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.0
+offset_bottom = 203.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bkem7")
 
-[node name="Profile Auswahl" type="Label" parent="VBoxContainer" unique_id=2123979508]
+[node name="S1" type="Control" parent="." unique_id=1616284810]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_top = 74.0
+offset_right = 576.0
+offset_bottom = 398.0
+grow_horizontal = 2
+rotation = 3.1415927
+pivot_offset = Vector2(576, 125)
+
+[node name="PanelContainer" type="PanelContainer" parent="S1" unique_id=1462449416]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h2hfu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="S1/PanelContainer" unique_id=1320442076]
 layout_mode = 2
-text = "Profile Auswahl"
+theme_override_constants/separation = 80
 
-[node name="S1Panel" type="PanelContainer" parent="VBoxContainer" unique_id=691595062]
-layout_mode = 2
-
-[node name="Spieler 1" type="Label" parent="VBoxContainer/S1Panel" unique_id=416420133]
+[node name="Spieler 1" type="Label" parent="S1/PanelContainer/VBoxContainer" unique_id=416420133]
 layout_mode = 2
 text = "Spieler 1"
+horizontal_alignment = 1
 
-[node name="S1OptionButton" type="OptionButton" parent="VBoxContainer/S1Panel" unique_id=940425945]
+[node name="HBoxContainer" type="HBoxContainer" parent="S1/PanelContainer/VBoxContainer" unique_id=206754614]
 layout_mode = 2
-item_count = 4
-popup/item_0/text = "Vegan"
-popup/item_0/id = 1
-popup/item_1/text = "vegetarisch"
-popup/item_1/id = 2
-popup/item_2/text = "glutenfrei"
-popup/item_2/id = 3
-popup/item_3/text = "laktosefrei"
-popup/item_3/id = 4
+alignment = 1
 
-[node name="S2Panel" type="PanelContainer" parent="VBoxContainer" unique_id=741720402]
+[node name="Card1" type="Button" parent="S1/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1372723395]
 layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("3_8vclp")
+text = "VEGAN"
+icon = ExtResource("3_kt1q3")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
 
-[node name="Spieler 2" type="Label" parent="VBoxContainer/S2Panel" unique_id=123184595]
+[node name="Card2" type="Button" parent="S1/PanelContainer/VBoxContainer/HBoxContainer" unique_id=119757775]
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("3_8vclp")
+text = "VEGETARISCH"
+icon = ExtResource("4_q4x10")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Card3" type="Button" parent="S1/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1755147058]
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("3_8vclp")
+text = "LAKTOSEFREI"
+icon = ExtResource("5_8vclp")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Card4" type="Button" parent="S1/PanelContainer/VBoxContainer/HBoxContainer" unique_id=803408127]
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("3_8vclp")
+text = "GLUTENFREI"
+icon = ExtResource("6_f22dl")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="S1Button" type="Button" parent="S1/PanelContainer/VBoxContainer" unique_id=129215235]
+layout_mode = 2
+text = "bestimmen"
+
+[node name="S2" type="PanelContainer" parent="." unique_id=496207427]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="S2" unique_id=708647685]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fbst4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="S2/PanelContainer" unique_id=620562983]
+layout_mode = 2
+theme_override_constants/separation = 80
+
+[node name="Spieler 2" type="Label" parent="S2/PanelContainer/VBoxContainer" unique_id=123184595]
 layout_mode = 2
 text = "Spieler 2"
+horizontal_alignment = 1
 
-[node name="S2OptionButton" type="OptionButton" parent="VBoxContainer/S2Panel" unique_id=1688652647]
+[node name="HBoxContainer" type="HBoxContainer" parent="S2/PanelContainer/VBoxContainer" unique_id=1176796167]
 layout_mode = 2
-item_count = 4
-popup/item_0/text = "Vegan"
-popup/item_0/id = 1
-popup/item_1/text = "Vegetarisch"
-popup/item_1/id = 2
-popup/item_2/text = "glutenfrei"
-popup/item_2/id = 3
-popup/item_3/text = "laktosefrei"
-popup/item_3/id = 4
+alignment = 1
 
-[node name="StartButton" type="Button" parent="VBoxContainer" unique_id=1793563096]
+[node name="Card1" type="Button" parent="S2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1726109151]
 layout_mode = 2
-text = "Starten"
+toggle_mode = true
+button_group = ExtResource("8_f22dl")
+text = "VEGAN"
+icon = ExtResource("3_kt1q3")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
 
-[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[node name="Card2" type="Button" parent="S2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1158432013]
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("8_f22dl")
+text = "VEGETARISCH"
+icon = ExtResource("4_q4x10")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Card3" type="Button" parent="S2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1703151745]
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("8_f22dl")
+text = "LAKTOSEFREI"
+icon = ExtResource("5_8vclp")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Card4" type="Button" parent="S2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=782666931]
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("8_f22dl")
+text = "GLUTENFREI"
+icon = ExtResource("6_f22dl")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="S2Button" type="Button" parent="S2/PanelContainer/VBoxContainer" unique_id=647426800]
+layout_mode = 2
+text = "bestimmen"
