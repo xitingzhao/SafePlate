@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dm4ddvgp3o77i" path="res://scripts/profilauswahl.gd" id="1_yrv5n"]
 [ext_resource type="Texture2D" uid="uid://deunkw3i43ppr" path="res://assets/background/Hintergrund2.jpg" id="2_bkem7"]
 [ext_resource type="ButtonGroup" uid="uid://cg10fuu0eul57" path="res://assets/Auswahlbild/player1_select_group.tres" id="3_8vclp"]
+[ext_resource type="FontFile" uid="uid://bwguuv1ped2cn" path="res://assets/font/Brown Cookies.otf" id="3_f22dl"]
 [ext_resource type="Texture2D" uid="uid://b8jly1mq4joeu" path="res://assets/Auswahlbild/vegan.jpg" id="3_kt1q3"]
 [ext_resource type="Texture2D" uid="uid://bayg24m4llvxx" path="res://assets/Auswahlbild/vegetarisch.jpg" id="4_q4x10"]
 [ext_resource type="Texture2D" uid="uid://cv2nn5ahlygm3" path="res://assets/Auswahlbild/laktosefrei.jpg" id="5_8vclp"]
@@ -61,19 +62,24 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_h2hfu")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="S1/PanelContainer" unique_id=1320442076]
 layout_mode = 2
-theme_override_constants/separation = 80
+theme_override_constants/separation = 60
 
 [node name="Spieler 1" type="Label" parent="S1/PanelContainer/VBoxContainer" unique_id=416420133]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_f22dl")
+theme_override_font_sizes/font_size = 50
 text = "Spieler 1"
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="S1/PanelContainer/VBoxContainer" unique_id=206754614]
 layout_mode = 2
+theme_override_constants/separation = 80
 alignment = 1
 
 [node name="Card1" type="Button" parent="S1/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1372723395]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_f22dl")
+theme_override_font_sizes/font_size = 35
 toggle_mode = true
 button_group = ExtResource("3_8vclp")
 text = "VEGAN"
@@ -84,6 +90,8 @@ expand_icon = true
 
 [node name="Card2" type="Button" parent="S1/PanelContainer/VBoxContainer/HBoxContainer" unique_id=119757775]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_f22dl")
+theme_override_font_sizes/font_size = 35
 toggle_mode = true
 button_group = ExtResource("3_8vclp")
 text = "VEGETARISCH"
@@ -94,6 +102,8 @@ expand_icon = true
 
 [node name="Card3" type="Button" parent="S1/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1755147058]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_f22dl")
+theme_override_font_sizes/font_size = 35
 toggle_mode = true
 button_group = ExtResource("3_8vclp")
 text = "LAKTOSEFREI"
@@ -104,6 +114,8 @@ expand_icon = true
 
 [node name="Card4" type="Button" parent="S1/PanelContainer/VBoxContainer/HBoxContainer" unique_id=803408127]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_f22dl")
+theme_override_font_sizes/font_size = 35
 toggle_mode = true
 button_group = ExtResource("3_8vclp")
 text = "GLUTENFREI"
@@ -135,19 +147,24 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_fbst4")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="S2/PanelContainer" unique_id=620562983]
 layout_mode = 2
-theme_override_constants/separation = 80
+theme_override_constants/separation = 60
 
 [node name="Spieler 2" type="Label" parent="S2/PanelContainer/VBoxContainer" unique_id=123184595]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_f22dl")
+theme_override_font_sizes/font_size = 50
 text = "Spieler 2"
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="S2/PanelContainer/VBoxContainer" unique_id=1176796167]
 layout_mode = 2
+theme_override_constants/separation = 80
 alignment = 1
 
 [node name="Card1" type="Button" parent="S2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1726109151]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_f22dl")
+theme_override_font_sizes/font_size = 35
 toggle_mode = true
 button_group = ExtResource("8_f22dl")
 text = "VEGAN"
@@ -158,6 +175,8 @@ expand_icon = true
 
 [node name="Card2" type="Button" parent="S2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1158432013]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_f22dl")
+theme_override_font_sizes/font_size = 35
 toggle_mode = true
 button_group = ExtResource("8_f22dl")
 text = "VEGETARISCH"
@@ -168,6 +187,8 @@ expand_icon = true
 
 [node name="Card3" type="Button" parent="S2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1703151745]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_f22dl")
+theme_override_font_sizes/font_size = 35
 toggle_mode = true
 button_group = ExtResource("8_f22dl")
 text = "LAKTOSEFREI"
@@ -178,6 +199,8 @@ expand_icon = true
 
 [node name="Card4" type="Button" parent="S2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=782666931]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_f22dl")
+theme_override_font_sizes/font_size = 35
 toggle_mode = true
 button_group = ExtResource("8_f22dl")
 text = "GLUTENFREI"
