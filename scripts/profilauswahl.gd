@@ -28,7 +28,7 @@ func _on_s1_card_selected(selected_card: Button):
 	GameGlobal.player1 = selected_card.text
 
 func _on_s2_card_selected(selected_card: Button):
-	if is_s1_ready:
+	if is_s2_ready:
 		return
 	GameGlobal.player2 = selected_card.text
 
@@ -40,9 +40,17 @@ func _on_s1_ready_toggled(is_pressed:bool):
 	if is_pressed:
 		s1_ready_button.text = "Bereit!"
 		s1_ready_button.modulate = Color.GREEN
+		for card in s1_cards.get_children():
+			if card is Button:
+				card.disabled = true
+				card.modulate.a = 0.5
 	else:
 		s1_ready_button.text = "Bereit?"
 		s1_ready_button.modulate = Color.WHITE
+		for card in s1_cards.get_children():
+			if card is Button:
+				card.disabled = false
+				card.modulate.a = 1.0
 	check_both_ready()
 
 func _on_s2_ready_toggled(is_pressed: bool):
@@ -53,10 +61,17 @@ func _on_s2_ready_toggled(is_pressed: bool):
 	if is_pressed:
 		s2_ready_button.text = "Bereit!"
 		s2_ready_button.modulate = Color.GREEN
+		for card in s2_cards.get_children():
+			if card is Button:
+				card.disabled = true
+				card.modulate.a = 0.5
 	else:
 		s2_ready_button.text = "Bereit?"
 		s2_ready_button.modulate = Color.WHITE
-		
+		for card in s2_cards.get_children():
+			if card is Button:
+				card.disabled = false
+				card.modulate.a = 1.0
 	check_both_ready()
 	
 func check_both_ready():
