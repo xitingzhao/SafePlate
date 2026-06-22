@@ -13,8 +13,148 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2hfu"]
 bg_color = Color(0.7294118, 0.1764706, 0.16470589, 0.47058824)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f22dl"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66vhn"]
+bg_color = Color(0.1882353, 0.6784314, 0.22745098, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h0icr"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nh2qt"]
+bg_color = Color(0.1882353, 0.6784314, 0.22745098, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4bdm"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dkfl7"]
+bg_color = Color(0.1882353, 0.6784314, 0.22745098, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4x57u"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dy21g"]
+bg_color = Color(0.1882353, 0.6784314, 0.22745098, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5dom4"]
+bg_color = Color(0.1882353, 0.6784314, 0.22745098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxl1d"]
+bg_color = Color(0.25565878, 0.2556588, 0.2556587, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fbst4"]
 bg_color = Color(0.33107495, 0.62596744, 0.8722371, 0.47058824)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fc4c3"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hdc2x"]
+bg_color = Color(0.1882353, 0.6784314, 0.22745098, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cp8xf"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8why"]
+bg_color = Color(0.1882353, 0.6784314, 0.22745098, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5uaqv"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vn76o"]
+bg_color = Color(0.1882353, 0.6784314, 0.22745098, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_33n8l"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_02t3s"]
+bg_color = Color(0.1882353, 0.6784314, 0.22745098, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_irph3"]
+bg_color = Color(0.1882353, 0.6784314, 0.22745098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7j4mp"]
+bg_color = Color(0.25490198, 0.25490198, 0.25490198, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Profilauswahl" type="Control" unique_id=1626076075]
 layout_mode = 3
@@ -78,8 +218,11 @@ alignment = 1
 
 [node name="Card1" type="Button" parent="S1/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1372723395]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_f22dl")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_f22dl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_66vhn")
 toggle_mode = true
 button_group = ExtResource("3_8vclp")
 text = "VEGAN"
@@ -90,8 +233,11 @@ expand_icon = true
 
 [node name="Card2" type="Button" parent="S1/PanelContainer/VBoxContainer/HBoxContainer" unique_id=119757775]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_f22dl")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_h0icr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nh2qt")
 toggle_mode = true
 button_group = ExtResource("3_8vclp")
 text = "VEGETARISCH"
@@ -102,8 +248,11 @@ expand_icon = true
 
 [node name="Card3" type="Button" parent="S1/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1755147058]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_f22dl")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_x4bdm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dkfl7")
 toggle_mode = true
 button_group = ExtResource("3_8vclp")
 text = "LAKTOSEFREI"
@@ -114,8 +263,11 @@ expand_icon = true
 
 [node name="Card4" type="Button" parent="S1/PanelContainer/VBoxContainer/HBoxContainer" unique_id=803408127]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_f22dl")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_4x57u")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dy21g")
 toggle_mode = true
 button_group = ExtResource("3_8vclp")
 text = "GLUTENFREI"
@@ -126,6 +278,11 @@ expand_icon = true
 
 [node name="S1Button" type="Button" parent="S1/PanelContainer/VBoxContainer" unique_id=129215235]
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_f22dl")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_5dom4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qxl1d")
 text = "bestimmen"
 
 [node name="S2" type="PanelContainer" parent="." unique_id=496207427]
@@ -163,8 +320,11 @@ alignment = 1
 
 [node name="Card1" type="Button" parent="S2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1726109151]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_f22dl")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_fc4c3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hdc2x")
 toggle_mode = true
 button_group = ExtResource("8_f22dl")
 text = "VEGAN"
@@ -175,8 +335,11 @@ expand_icon = true
 
 [node name="Card2" type="Button" parent="S2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1158432013]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_f22dl")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_cp8xf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s8why")
 toggle_mode = true
 button_group = ExtResource("8_f22dl")
 text = "VEGETARISCH"
@@ -187,8 +350,11 @@ expand_icon = true
 
 [node name="Card3" type="Button" parent="S2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1703151745]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_f22dl")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_5uaqv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vn76o")
 toggle_mode = true
 button_group = ExtResource("8_f22dl")
 text = "LAKTOSEFREI"
@@ -199,8 +365,11 @@ expand_icon = true
 
 [node name="Card4" type="Button" parent="S2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=782666931]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_f22dl")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_33n8l")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_02t3s")
 toggle_mode = true
 button_group = ExtResource("8_f22dl")
 text = "GLUTENFREI"
@@ -211,4 +380,9 @@ expand_icon = true
 
 [node name="S2Button" type="Button" parent="S2/PanelContainer/VBoxContainer" unique_id=647426800]
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_f22dl")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_irph3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7j4mp")
 text = "bestimmen"
