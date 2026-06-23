@@ -3,6 +3,8 @@
 	"id": 1,
 	"name": "Kuhmilch",
 	"image": "Kuhmilch.png",
+	"collision_width": 40,
+	"collision_height": 80,
 	"allergens": ["Laktose"],
 	"tags": ["Vegetarisch", "Glutenfrei"]
   },
@@ -10,6 +12,8 @@
 	"id": 2,
 	"name": "Hafermilch",
 	"image": "Hafermilch.png",
+	"collision_width": 40,
+	"collision_height": 80,
 	"allergens": ["Gluten"],
 	"tags": ["Vegan", "Vegetarisch", "Laktosefrei"]
   },
@@ -17,6 +21,8 @@
 	"id": 3,
 	"name": "Vollkornbrot",
 	"image": "Vollkornbrot.png",
+	"collision_width": 80,
+	"collision_height": 80,
 	"allergens": ["Gluten"],
 	"tags": ["Vegan", "Vegetarisch", "Laktosefrei"]
   },
@@ -24,6 +30,8 @@
 	"id": 4,
 	"name": "Apfel",
 	"image": "Apfel.png",
+	"collision_width": 80,
+	"collision_height": 60,
 	"allergens": [],
 	"tags": ["Vegan", "Vegetarisch", "Glutenfrei", "Laktosefrei"]
   },
@@ -31,6 +39,8 @@
 	"id": 5,
 	"name": "Erdnussriegel",
 	"image": "Erdnussriegel.png",
+	"collision_width": 80,
+	"collision_height": 40,
 	"allergens": ["Erdnüsse"],
 	"tags": ["Vegan" ,"Vegetarisch", "Glutenfrei", "Laktosefrei"]
   },
@@ -38,6 +48,8 @@
 	"id": 6,
 	"name": "Joghurt",
 	"image": "Joghurt.png",
+	"collision_width": 80,
+	"collision_height": 80,
 	"allergens": ["Laktose"],
 	"tags": ["Vegetarisch", "Glutenfrei"]
   },
@@ -45,6 +57,8 @@
 	"id": 7,
 	"name": "Tofu",
 	"image": "Tofu.png",
+	"collision_width": 70,
+	"collision_height": 80,
 	"allergens": ["Soja"],
 	"tags": ["Vegan", "Vegetarisch", "Glutenfrei", "Laktosefrei"]
   },
@@ -52,6 +66,8 @@
 	"id": 8,
 	"name": "Käse",
 	"image": "Käse.png",
+	"collision_width": 80,
+	"collision_height": 70,
 	"allergens": ["Laktose"],
 	"tags": ["Vegetarisch", "Glutenfrei"]
   },
@@ -59,6 +75,8 @@
 	"id": 9,
 	"name": "Nudeln",
 	"image": "Nudeln.png",
+	"collision_width": 50,
+	"collision_height": 80,
 	"allergens": ["Gluten"],
 	"tags": ["Vegan", "Vegetarisch", "Laktosefrei"]
   },
@@ -66,6 +84,8 @@
 	"id": 10,
 	"name": "Ei",
 	"image": "Ei.png",
+	"collision_width": 80,
+	"collision_height": 60,
 	"allergens": [],
 	"tags": ["Vegetarisch", "Glutenfrei", "Laktosefrei"]
   }
