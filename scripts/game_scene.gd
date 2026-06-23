@@ -14,8 +14,7 @@ var cart_area_2_products: Array = []
 
 var product_scene := preload("res://scenes/product.tscn")
 
-var dragged_product: Node2D = null
-var drag_offset := Vector2.ZERO
+var active_drags := {}
 
 func _ready() -> void:
 	print(feedback)
@@ -105,31 +104,55 @@ func load_products_from_json() -> void:
 
 
 func _process(_delta: float) -> void:
-	if dragged_product != null:
-		dragged_product.global_position = get_global_mouse_position() + drag_offset
+	for touch_id in active_drags.keys():
+		var drag = active_drags[touch_id]
+		drag.product.global_position = drag.position + drag.offset
 		
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		print("Klick erkannt in GameScene: ", event.position)
-
+	if event is InputEventScreenTouch:
 		if event.pressed:
 			for product in shelf_area.get_children():
-				if product.has_method("is_mouse_over"):
-					print("prüfe Produkt: ", product.name)
-
-					if product.is_mouse_over():
-						print("DRAG START: ", product.name)
-						dragged_product = product
-						drag_offset = product.global_position - get_global_mouse_position()
-						product.z_index = 20
-						break
+				if product.has_method("is_point_over") and product.is_point_over(event.position):
+					active_drags[event.index] = {
+						"product": product,
+						"offset": product.global_position - event.position,
+						"position": event.position
+					}
+					product.z_index = 20
+					break
 		else:
-			if dragged_product != null:
-				print("DRAG STOP")
-				check_cart_drop(dragged_product)
-				dragged_product.z_index = 5
-				dragged_product = null
+			if active_drags.has(event.index):
+				var product = active_drags[event.index].product
+				check_cart_drop(product)
+				product.z_index = 5
+				active_drags.erase(event.index)
+
+	if event is InputEventScreenDrag:
+		if active_drags.has(event.index):
+			active_drags[event.index].position = event.position
+
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed:
+			for product in shelf_area.get_children():
+				if product.has_method("is_point_over") and product.is_point_over(event.position):
+					active_drags[-1] = {
+						"product": product,
+						"offset": product.global_position - event.position,
+						"position": event.position
+					}
+					product.z_index = 20
+					break
+		else:
+			if active_drags.has(-1):
+				var product = active_drags[-1].product
+				check_cart_drop(product)
+				product.z_index = 5
+				active_drags.erase(-1)
+
+	if event is InputEventMouseMotion:
+		if active_drags.has(-1):
+			active_drags[-1].position = event.position
 
 func check_cart_drop(product: Node2D) -> void:
 	var in_cart_1 := is_inside_control(product.global_position, cart_area_1)

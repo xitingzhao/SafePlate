@@ -53,3 +53,14 @@ func is_mouse_over() -> bool:
 	var rect := Rect2(-shape.size / 2.0, shape.size)
 
 	return rect.has_point(local_mouse)
+
+func is_point_over(global_point: Vector2) -> bool:
+	var shape := collision_shape.shape as RectangleShape2D
+
+	if shape == null:
+		return false
+
+	var local_point: Vector2 = collision_shape.to_local(global_point)
+	var rect := Rect2(-shape.size / 2.0, shape.size)
+
+	return rect.has_point(local_point)
