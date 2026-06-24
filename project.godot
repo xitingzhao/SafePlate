@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GameGlobal="*uid://d0l3jpp084pol"
+GameGlobal="*res://scripts/GameGlobal.gd"
 
 [physics]
 
