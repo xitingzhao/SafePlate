@@ -22,8 +22,29 @@ func _ready() -> void:
 	$Player1Area/ProfileArea1/VBoxContainer/ProfilArt.text = GameGlobal.player1
 	$Player2Area/ProfileArea2/VBoxContainer/ProfilArt.text = GameGlobal.player2
 	
+	# Aufgaben passend zum Profil anzeigen
+	$Player1Area/TaskArea1/VBoxContainer/TaskText.text = get_task_text(GameGlobal.player1)
+
+	$Player2Area/TaskArea2/VBoxContainer/TaskText.text = get_task_text(GameGlobal.player2)
+
+	
 	AgentSetup.place_in_game(self, agent_blue, agent_orange)
 	load_products_from_json()
+	
+func get_task_text(profile: String) -> String:
+	
+	match profile.to_lower():
+		"vegetarisch":
+			return "Du bist vegetarisch.\nWähle nur Produkte, \n die vegetarisch sind."
+			
+		"vegan":
+			return "Du bist vegan. \n Vermeide alle Produkte\nmit tierischen Zutaten."
+		"glutenfrei":
+			return "Du hast Glutenunverträglichkeit. \nWähle nur Produkte, \ndie glutenfrei sind."
+		"laktosefrei":
+			return "Du hast Laktoseintoleranz. \n Wähle nur Prudukte, \n die laktosefrei sind."
+		_:
+			return "Keine Aufgabe gewählt. "
 
 
 func end_game():

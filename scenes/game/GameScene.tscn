@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://bl12hj158277" path="res://scenes/product_info.tscn" id="4_b1len"]
 [ext_resource type="PackedScene" uid="uid://c3180rqva4alq" path="res://scenes/game/FeedbackOverlay.tscn" id="5_gs0nk"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lfi48"]
+bg_color = Color(0.75, 0.38550004, 0.1425, 0.47843137)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ks7xl"]
 bg_color = Color(0.7529412, 0.3882353, 0.14509805, 1)
 
@@ -16,6 +19,9 @@ bg_color = Color(0.7529412, 0.3882353, 0.14509805, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fjeox"]
 bg_color = Color(0.7515541, 0.38983387, 0.14478254, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hxmsx"]
+bg_color = Color(0.106599994, 0.54652995, 0.82, 0.4509804)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c3557"]
 bg_color = Color(0.1088335, 0.54596585, 0.8194142, 1)
@@ -52,6 +58,7 @@ grow_vertical = 2
 rotation = 3.1415927
 pivot_offset = Vector2(576, 81)
 mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lfi48")
 
 [node name="TaskArea1" type="Panel" parent="Player1Area" unique_id=1625188174]
 layout_mode = 1
@@ -63,17 +70,23 @@ anchor_bottom = 0.9
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ks7xl")
 
-[node name="Label" type="Label" parent="Player1Area/TaskArea1" unique_id=1970008544]
-layout_mode = 0
-offset_left = 219.95996
-offset_top = -1.1999569
-offset_right = 482.05994
-offset_bottom = 177.80005
-text = "Deine Aufgabe
+[node name="VBoxContainer" type="VBoxContainer" parent="Player1Area/TaskArea1" unique_id=249421723]
+layout_mode = 1
+offset_right = 463.151
+offset_bottom = 154.0
 
-Du hast eine Laktoseintoleranz.
+[node name="title" type="Label" parent="Player1Area/TaskArea1/VBoxContainer" unique_id=891648145]
+layout_mode = 2
+text = "Deine Aufgabe"
+horizontal_alignment = 2
+
+[node name="TaskText" type="Label" parent="Player1Area/TaskArea1/VBoxContainer" unique_id=1970008544]
+layout_mode = 2
+text = "Du hast eine Laktoseintoleranz.
 Vermeide Produkte
 mit Laktose."
+horizontal_alignment = 2
+vertical_alignment = 2
 
 [node name="ProfileArea1" type="Panel" parent="Player1Area" unique_id=1386981218]
 layout_mode = 1
@@ -92,6 +105,7 @@ offset_bottom = 40.0
 [node name="ProfilInfoTitle" type="Label" parent="Player1Area/ProfileArea1/VBoxContainer" unique_id=1528762971]
 layout_mode = 2
 text = "Dein Profil"
+horizontal_alignment = 1
 
 [node name="ProfilArt" type="Label" parent="Player1Area/ProfileArea1/VBoxContainer" unique_id=1046606919]
 layout_mode = 2
@@ -149,6 +163,7 @@ anchor_top = 0.75
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hxmsx")
 
 [node name="TaskArea2" type="Panel" parent="Player2Area" unique_id=1009697826]
 layout_mode = 1
@@ -160,17 +175,26 @@ anchor_bottom = 0.9
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_c3557")
 
-[node name="text für Task" type="Label" parent="Player2Area/TaskArea2" unique_id=1958594118]
-layout_mode = 0
-offset_left = 286.96002
-offset_top = -3.2000122
-offset_right = 446.96002
-offset_bottom = 123.79999
-text = "Deine Aufgabe
+[node name="VBoxContainer" type="VBoxContainer" parent="Player2Area/TaskArea2" unique_id=441907614]
+layout_direction = 1
+layout_mode = 1
+offset_right = 459.96
+offset_bottom = 130.0
+alignment = 1
 
-Du isst vegetarisch.
+[node name="DeineAufgabeTitle" type="Label" parent="Player2Area/TaskArea2/VBoxContainer" unique_id=345378321]
+layout_mode = 2
+text = "Deine Aufgabe
+"
+horizontal_alignment = 2
+
+[node name="TaskText" type="Label" parent="Player2Area/TaskArea2/VBoxContainer" unique_id=1958594118]
+layout_mode = 2
+text = "Du isst vegetarisch.
 Wähle nur Produkte,
 die vegetarisch sind."
+horizontal_alignment = 2
+vertical_alignment = 2
 
 [node name="ProfileArea2" type="Panel" parent="Player2Area" unique_id=1358012187]
 layout_mode = 1
