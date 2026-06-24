@@ -1,10 +1,30 @@
 [gd_scene format=3 uid="uid://bu0hk4nbxnc42"]
 
 [ext_resource type="Script" uid="uid://1p2pxn6yrm0g" path="res://scripts/game_scene.gd" id="1_2stm1"]
+[ext_resource type="Texture2D" uid="uid://cjo0mvofo3jab" path="res://assets/background/supermarkt hintergrund.png" id="2_b1len"]
 [ext_resource type="PackedScene" uid="uid://cewnebifuw5xs" path="res://scenes/agent.tscn" id="2_ldxrm"]
+[ext_resource type="Texture2D" uid="uid://b7jibnj6t7cgu" path="res://assets/background/regal.png" id="3_ks7xl"]
 [ext_resource type="Texture2D" uid="uid://bpm3bvftox6vd" path="res://assets/agent_sprite_blue.png" id="3_vaave"]
 [ext_resource type="PackedScene" uid="uid://bl12hj158277" path="res://scenes/product_info.tscn" id="4_b1len"]
 [ext_resource type="PackedScene" uid="uid://c3180rqva4alq" path="res://scenes/game/FeedbackOverlay.tscn" id="5_gs0nk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ks7xl"]
+bg_color = Color(0.7529412, 0.3882353, 0.14509805, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8cups"]
+bg_color = Color(0.7529412, 0.3882353, 0.14509805, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fjeox"]
+bg_color = Color(0.7515541, 0.38983387, 0.14478254, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c3557"]
+bg_color = Color(0.1088335, 0.54596585, 0.8194142, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_am3tj"]
+bg_color = Color(0.10980392, 0.54509807, 0.81960785, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8x43h"]
+bg_color = Color(0.10980392, 0.54509807, 0.81960785, 1)
 
 [node name="GameScene" type="Control" unique_id=551222279]
 layout_mode = 3
@@ -14,6 +34,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2stm1")
+
+[node name="Hintergrund" type="TextureRect" parent="." unique_id=1610197438]
+layout_mode = 0
+offset_right = 1148.0
+offset_bottom = 642.0
+texture = ExtResource("2_b1len")
+expand_mode = 1
 
 [node name="Player1Area" type="Panel" parent="." unique_id=503117175]
 layout_mode = 1
@@ -34,6 +61,7 @@ anchor_top = 0.1
 anchor_right = 0.42
 anchor_bottom = 0.9
 mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ks7xl")
 
 [node name="Label" type="Label" parent="Player1Area/TaskArea1" unique_id=1970008544]
 layout_mode = 0
@@ -54,6 +82,7 @@ anchor_left = 0.45
 anchor_top = 0.1
 anchor_right = 0.62
 anchor_bottom = 0.9
+theme_override_styles/panel = SubResource("StyleBoxFlat_8cups")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Player1Area/ProfileArea1" unique_id=697733555]
 layout_mode = 0
@@ -77,6 +106,7 @@ anchor_right = 1.0
 anchor_bottom = 0.9
 offset_right = -23.04004
 mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fjeox")
 
 [node name="warenkorbtext1" type="Label" parent="Player1Area/CartArea1" unique_id=433322737]
 layout_mode = 0
@@ -94,12 +124,15 @@ anchor_top = 0.25
 anchor_right = 1.0
 anchor_bottom = 0.75
 
-[node name="ShelfBackground" type="ColorRect" parent="ShelfArea" unique_id=126200679]
+[node name="ShelfBackground" type="TextureRect" parent="ShelfArea" unique_id=756029854]
 layout_mode = 0
-offset_right = 900.0
-offset_bottom = 230.0
+offset_left = 56.0
+offset_top = 5.0
+offset_right = 942.0
+offset_bottom = 307.0
 mouse_filter = 2
-color = Color(0.23273617, 0.24792165, 0.25438252, 1)
+texture = ExtResource("3_ks7xl")
+expand_mode = 1
 
 [node name="shelfiltlelabel" type="Label" parent="ShelfArea" unique_id=545811429]
 layout_mode = 0
@@ -125,6 +158,7 @@ anchor_top = 0.1
 anchor_right = 0.42
 anchor_bottom = 0.9
 mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_c3557")
 
 [node name="text für Task" type="Label" parent="Player2Area/TaskArea2" unique_id=1958594118]
 layout_mode = 0
@@ -145,6 +179,7 @@ anchor_left = 0.45
 anchor_top = 0.1
 anchor_right = 0.62
 anchor_bottom = 0.9
+theme_override_styles/panel = SubResource("StyleBoxFlat_am3tj")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Player2Area/ProfileArea2" unique_id=1298669415]
 layout_mode = 0
@@ -168,6 +203,7 @@ anchor_right = 1.0
 anchor_bottom = 0.9
 offset_right = -23.04004
 mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8x43h")
 
 [node name="warenkorbtext2" type="Label" parent="Player2Area/CartArea2" unique_id=1171562075]
 layout_mode = 0

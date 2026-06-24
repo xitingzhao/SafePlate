@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dnc4tltcmhyet"]
 
 [ext_resource type="Script" uid="uid://d0otyqfd64cfg" path="res://scripts/main_menu.gd" id="1_nl8w3"]
-[ext_resource type="Texture2D" uid="uid://iila5beteff7" path="res://assets/background/Hintergrund.jpg" id="2_247la"]
+[ext_resource type="Texture2D" uid="uid://cjo0mvofo3jab" path="res://assets/background/supermarkt hintergrund.png" id="2_247la"]
 [ext_resource type="FontFile" uid="uid://bwguuv1ped2cn" path="res://assets/font/Brown Cookies.otf" id="3_kiqgm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hj162"]
