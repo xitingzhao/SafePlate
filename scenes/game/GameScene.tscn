@@ -274,6 +274,7 @@ scale = Vector2(0.25, 0.25)
 
 [node name="ProductInfo" parent="." unique_id=1250334183 instance=ExtResource("4_b1len")]
 layout_mode = 1
+z_index = 50
 
 [node name="FeedbackOverlay" parent="." unique_id=1924975418 instance=ExtResource("5_gs0nk")]
 

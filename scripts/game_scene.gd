@@ -2,7 +2,6 @@ extends Control
 
 @onready var agent_blue: Node2D = $AgentBlue
 @onready var agent_orange: Node2D = $AgentOrange
-@onready var feedback = $FeedbackOverlay
 
 const Evaluator = preload("res://scripts/Evaluator.gd")
 @onready var product_info: Control = $ProductInfo
@@ -15,11 +14,13 @@ var cart_area_2_products: Array = []
 var product_scene := preload("res://scenes/product.tscn")
 
 var active_drags := {}
+var pending_interactions := {}
+
+const TAP_THRESHOLD := 12.0
 
 const PROFILE_IMAGE_DIR := "res://assets/Auswahlbild/"
 
 func _ready() -> void:
-	print(feedback)
 	_setup_profile_area($Player1Area/ProfileArea1/VBoxContainer/ProfilRow, GameGlobal.player1)
 	_setup_profile_area($Player2Area/ProfileArea2/VBoxContainer/ProfilRow, GameGlobal.player2)
 	
@@ -71,8 +72,6 @@ func end_game():
 
 func evaluate_live(player: String, product_data: Dictionary, agent: Node2D) -> void:
 	var result = Evaluator.check_product(player, product_data)
-
-	feedback.show_feedback(result["correct"], result["message"])
 
 	if result["correct"]:
 		AgentSetup.notify_correct(agent)
@@ -153,48 +152,60 @@ func _process(_delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventScreenTouch:
-		if event.pressed:
-			for product in shelf_area.get_children():
-				if product.has_method("is_point_over") and product.is_point_over(event.position):
-					active_drags[event.index] = {
-						"product": product,
-						"offset": product.global_position - event.position,
-						"position": event.position
-					}
-					product.z_index = 20
-					break
-		else:
-			if active_drags.has(event.index):
-				var product = active_drags[event.index].product
-				check_cart_drop(product)
-				product.z_index = 5
-				active_drags.erase(event.index)
+		_handle_pointer_press(event.index, event.position, event.pressed)
+	elif event is InputEventScreenDrag:
+		_handle_pointer_drag(event.index, event.position)
+	elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		_handle_pointer_press(-1, event.position, event.pressed)
+	elif event is InputEventMouseMotion and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		_handle_pointer_drag(-1, event.position)
 
-	if event is InputEventScreenDrag:
-		if active_drags.has(event.index):
-			active_drags[event.index].position = event.position
 
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if event.pressed:
-			for product in shelf_area.get_children():
-				if product.has_method("is_point_over") and product.is_point_over(event.position):
-					active_drags[-1] = {
-						"product": product,
-						"offset": product.global_position - event.position,
-						"position": event.position
-					}
-					product.z_index = 20
-					break
-		else:
-			if active_drags.has(-1):
-				var product = active_drags[-1].product
-				check_cart_drop(product)
-				product.z_index = 5
-				active_drags.erase(-1)
+func _handle_pointer_press(pointer_id: int, position: Vector2, pressed: bool) -> void:
+	if pressed:
+		for product in shelf_area.get_children():
+			if product.has_method("is_point_over") and product.is_point_over(position):
+				pending_interactions[pointer_id] = {
+					"product": product,
+					"start_pos": position
+				}
+				break
+		return
 
-	if event is InputEventMouseMotion:
-		if active_drags.has(-1):
-			active_drags[-1].position = event.position
+	if pending_interactions.has(pointer_id) and not active_drags.has(pointer_id):
+		var pending = pending_interactions[pointer_id]
+		if pending.start_pos.distance_to(position) <= TAP_THRESHOLD:
+			_show_product_info(pending.product)
+	pending_interactions.erase(pointer_id)
+
+	if active_drags.has(pointer_id):
+		var product = active_drags[pointer_id].product
+		check_cart_drop(product)
+		product.z_index = 5
+		active_drags.erase(pointer_id)
+
+
+func _handle_pointer_drag(pointer_id: int, position: Vector2) -> void:
+	if pending_interactions.has(pointer_id) and not active_drags.has(pointer_id):
+		var pending = pending_interactions[pointer_id]
+		if pending.start_pos.distance_to(position) > TAP_THRESHOLD:
+			var product = pending.product
+			active_drags[pointer_id] = {
+				"product": product,
+				"offset": product.global_position - position,
+				"position": position
+			}
+			product.z_index = 20
+			pending_interactions.erase(pointer_id)
+
+	if active_drags.has(pointer_id):
+		active_drags[pointer_id].position = position
+
+
+func _show_product_info(product: Node2D) -> void:
+	if product == null or product.product_data.is_empty():
+		return
+	product_info.show_info(product.product_data)
 
 func check_cart_drop(product: Node2D) -> void:
 	var in_cart_1 := is_inside_control(product.global_position, cart_area_1)

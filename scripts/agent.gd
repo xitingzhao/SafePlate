@@ -35,4 +35,5 @@ func apply_side_style(side: String) -> void:
 		"S2", "orange":
 			#sprite.modulate = Color(1.0, 0.6, 0.2)
 			sprite.scale = Vector2.ONE
-			$SpeechBubble.position = Vector2(-150, 130)
+			# Agent ist um 180° gedreht – negative Y-Position schiebt die Blase Richtung Bildschirmmitte
+			$SpeechBubble.position = Vector2(-200, -110)
