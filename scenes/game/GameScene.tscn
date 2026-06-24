@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://1p2pxn6yrm0g" path="res://scripts/game_scene.gd" id="1_2stm1"]
 [ext_resource type="Texture2D" uid="uid://cjo0mvofo3jab" path="res://assets/background/supermarkt hintergrund.png" id="2_b1len"]
-[ext_resource type="PackedScene" uid="uid://cewnebifuw5xs" path="res://scenes/agent.tscn" id="2_ldxrm"]
+[ext_resource type="PackedScene" uid="uid://bvylk6y3ilt8j" path="res://scenes/agent.tscn" id="2_ldxrm"]
 [ext_resource type="Texture2D" uid="uid://b7jibnj6t7cgu" path="res://assets/background/regal.png" id="3_ks7xl"]
 [ext_resource type="Texture2D" uid="uid://bpm3bvftox6vd" path="res://assets/agent_sprite_blue.png" id="3_vaave"]
 [ext_resource type="PackedScene" uid="uid://bl12hj158277" path="res://scenes/product_info.tscn" id="4_b1len"]
@@ -107,9 +107,20 @@ layout_mode = 2
 text = "Dein Profil"
 horizontal_alignment = 1
 
-[node name="ProfilArt" type="Label" parent="Player1Area/ProfileArea1/VBoxContainer" unique_id=1046606919]
+[node name="ProfilRow" type="HBoxContainer" parent="Player1Area/ProfileArea1/VBoxContainer" unique_id=1046606919]
 layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ProfilArt" type="Label" parent="Player1Area/ProfileArea1/VBoxContainer/ProfilRow" unique_id=2046606920]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
 text = "vegan"
+
+[node name="ProfilIcon" type="TextureRect" parent="Player1Area/ProfileArea1/VBoxContainer/ProfilRow" unique_id=-1248360375]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
 
 [node name="CartArea1" type="Panel" parent="Player1Area" unique_id=1920343177]
 layout_mode = 1
@@ -214,9 +225,20 @@ offset_bottom = 40.0
 layout_mode = 2
 text = "Dein Profil"
 
-[node name="ProfilArt" type="Label" parent="Player2Area/ProfileArea2/VBoxContainer" unique_id=1988563634]
+[node name="ProfilRow" type="HBoxContainer" parent="Player2Area/ProfileArea2/VBoxContainer" unique_id=1988563634]
 layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ProfilArt" type="Label" parent="Player2Area/ProfileArea2/VBoxContainer/ProfilRow" unique_id=-1306403661]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
 text = "vegetarisch"
+
+[node name="ProfilIcon" type="TextureRect" parent="Player2Area/ProfileArea2/VBoxContainer/ProfilRow" unique_id=-306403660]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
 
 [node name="CartArea2" type="Panel" parent="Player2Area" unique_id=2120119005]
 layout_mode = 1
