@@ -3,6 +3,9 @@
 	"id": 1,
 	"name": "Kuhmilch",
 	"image": "Kuhmilch.png",
+	"collision_width": 40,
+	"collision_height": 80,
+	"ingredients": ["Kuhmilch"],
 	"allergens": ["Laktose"],
 	"tags": ["Vegetarisch", "Glutenfrei"]
   },
@@ -10,6 +13,9 @@
 	"id": 2,
 	"name": "Hafermilch",
 	"image": "Hafermilch.png",
+	"collision_width": 40,
+	"collision_height": 80,
+	"ingredients": ["Wasser", "Hafer", "Meersalz"],
 	"allergens": ["Gluten"],
 	"tags": ["Vegan", "Vegetarisch", "Laktosefrei"]
   },
@@ -17,6 +23,9 @@
 	"id": 3,
 	"name": "Vollkornbrot",
 	"image": "Vollkornbrot.png",
+	"collision_width": 80,
+	"collision_height": 80,
+	"ingredients": ["Roggenvollkornschrot", "Wasser", "Roggenmehl", "Salz", "Gerstenmalz", "Hefe"],
 	"allergens": ["Gluten"],
 	"tags": ["Vegan", "Vegetarisch", "Laktosefrei"]
   },
@@ -24,6 +33,9 @@
 	"id": 4,
 	"name": "Apfel",
 	"image": "Apfel.png",
+	"collision_width": 80,
+	"collision_height": 60,
+	"ingredients": ["Apfel"],
 	"allergens": [],
 	"tags": ["Vegan", "Vegetarisch", "Glutenfrei", "Laktosefrei"]
   },
@@ -31,13 +43,19 @@
 	"id": 5,
 	"name": "Erdnussriegel",
 	"image": "Erdnussriegel.png",
-	"allergens": ["Erdnüsse"],
-	"tags": ["Vegan" ,"Vegetarisch", "Glutenfrei", "Laktosefrei"]
+	"collision_width": 80,
+	"collision_height": 40,
+	"ingredients": ["Zucker", "Erdnüsse", "pflanzliche Fette", "Kakaobutter", "Weizenmehl", "Magermilch", "Sahne", "Salz"],
+	"allergens": ["Erdnüsse", "Gluten", "Laktose"],
+	"tags": ["Vegan" ,"Vegetarisch"]
   },
   {
 	"id": 6,
 	"name": "Joghurt",
 	"image": "Joghurt.png",
+	"collision_width": 80,
+	"collision_height": 80,
+	"ingredients": ["Milch"],
 	"allergens": ["Laktose"],
 	"tags": ["Vegetarisch", "Glutenfrei"]
   },
@@ -45,6 +63,9 @@
 	"id": 7,
 	"name": "Tofu",
 	"image": "Tofu.png",
+	"collision_width": 70,
+	"collision_height": 80,
+	"ingredients": ["Sojabohnen", "Wasser", "Calciumsulfat"],
 	"allergens": ["Soja"],
 	"tags": ["Vegan", "Vegetarisch", "Glutenfrei", "Laktosefrei"]
   },
@@ -52,6 +73,9 @@
 	"id": 8,
 	"name": "Käse",
 	"image": "Käse.png",
+	"collision_width": 80,
+	"collision_height": 70,
+	"ingredients": ["Milch", "Lab", "Salz"],
 	"allergens": ["Laktose"],
 	"tags": ["Vegetarisch", "Glutenfrei"]
   },
@@ -59,6 +83,9 @@
 	"id": 9,
 	"name": "Nudeln",
 	"image": "Nudeln.png",
+	"collision_width": 50,
+	"collision_height": 80,
+	"ingredients": ["Hartweizengrieß", "Wasser", "Salz"],
 	"allergens": ["Gluten"],
 	"tags": ["Vegan", "Vegetarisch", "Laktosefrei"]
   },
@@ -66,7 +93,30 @@
 	"id": 10,
 	"name": "Ei",
 	"image": "Ei.png",
+	"collision_width": 80,
+	"collision_height": 60,
+	"ingredients": ["Ei"],
 	"allergens": [],
 	"tags": ["Vegetarisch", "Glutenfrei", "Laktosefrei"]
+  },
+  {
+	"id": 11,
+	"name": "Hackfleisch",
+	"image": "Hackfleisch.png",
+	"collision_width": 80,
+	"collision_height": 60,
+	"ingredients": ["Schweinefleisch", "Rindfleisch"],
+	"allergens": [],
+	"tags": ["Glutenfrei", "Laktosefrei"]
+  },
+  {
+	"id": 12,
+	"name": "Leberwurst",
+	"image": "Leberwurst.png",
+	"collision_width": 80,
+	"collision_height": 60,
+	"ingredients": ["Schweinefleisch", "Schweineleber", "Speck", "Kochsalz", "Gewürze", "Zucker"],
+	"allergens": [],
+	"tags": ["Glutenfrei", "Laktosefrei"]
   }
 ]
