@@ -14,16 +14,31 @@ var cart_area_2_products: Array = []
 
 var product_scene := preload("res://scenes/product.tscn")
 
+const PROFILE_IMAGE_DIR := "res://assets/Auswahlbild/"
+
 var dragged_product: Node2D = null
 var drag_offset := Vector2.ZERO
 
 func _ready() -> void:
 	print(feedback)
-	$Player1Area/ProfileArea1/VBoxContainer/ProfilArt.text = GameGlobal.player1
-	$Player2Area/ProfileArea2/VBoxContainer/ProfilArt.text = GameGlobal.player2
+	_setup_profile_area($Player1Area/ProfileArea1/VBoxContainer/ProfilRow, GameGlobal.player1)
+	_setup_profile_area($Player2Area/ProfileArea2/VBoxContainer/ProfilRow, GameGlobal.player2)
 	
 	AgentSetup.place_in_game(self, agent_blue, agent_orange)
 	load_products_from_json()
+
+func _setup_profile_area(profile_row: HBoxContainer, profile_name: String) -> void:
+	var profile_key := profile_name.strip_edges().to_lower()
+	var label: Label = profile_row.get_node("ProfilArt")
+	var icon: TextureRect = profile_row.get_node("ProfilIcon")
+	label.text = profile_key
+
+	var image_path := PROFILE_IMAGE_DIR + profile_key + ".jpg"
+	if ResourceLoader.exists(image_path):
+		icon.texture = load(image_path)
+		icon.visible = true
+	else:
+		icon.visible = false
 
 
 func end_game():
