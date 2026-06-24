@@ -76,7 +76,7 @@ func load_products_from_json() -> void:
 		print("JSON fehlerhaft")
 		return
 
-	var columns := 5
+	var columns := 6
 	var spacing_x := 160
 	var spacing_y := 120
 	var start_x := 100
@@ -85,20 +85,26 @@ func load_products_from_json() -> void:
 	var index := 0
 
 	for product_data in products:
-		var product = product_scene.instantiate()
-		product.name = str(product_data.get("name", "Produkt"))
-		shelf_area.add_child(product)
-
-		product.z_index = 5
 
 		var x := start_x + (index % columns) * spacing_x
 		var y := start_y + int(index / columns) * spacing_y
-		product.position = Vector2(x, y)
 
-		product.setup(product_data)
+		for copy_index in range(2):
 
-		if product.has_method("bind_product_info"):
-			product.bind_product_info(product_info)
+			var product = product_scene.instantiate()
+
+			product.name = str(product_data.get("name", "Produkt")) + "_" + str(copy_index + 1)
+
+			shelf_area.add_child(product)
+
+			product.position = Vector2(x, y)
+
+			product.z_index = 5 + copy_index
+
+			product.setup(product_data)
+
+			if product.has_method("bind_product_info"):
+				product.bind_product_info(product_info)
 
 		index += 1
 
