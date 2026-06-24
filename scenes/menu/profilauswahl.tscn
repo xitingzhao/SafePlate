@@ -11,7 +11,7 @@
 [ext_resource type="ButtonGroup" uid="uid://dxi8iyv5qo1le" path="res://assets/Auswahlbild/player2_select_group.tres" id="8_f22dl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2hfu"]
-bg_color = Color(0.7294118, 0.1764706, 0.16470589, 0.47058824)
+bg_color = Color(0.7529412, 0.3882353, 0.14509805, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f22dl"]
 bg_color = Color(1, 1, 1, 1)
@@ -84,7 +84,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fbst4"]
-bg_color = Color(0.33107495, 0.62596744, 0.8722371, 0.47058824)
+bg_color = Color(0.10980392, 0.54509807, 0.81960785, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fc4c3"]
 bg_color = Color(1, 1, 1, 1)
