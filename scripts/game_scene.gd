@@ -107,6 +107,7 @@ func load_products_from_json() -> void:
 
 	var json_text := file.get_as_text()
 	var products = JSON.parse_string(json_text)
+	products.shuffle()
 
 	if products == null:
 		print("JSON fehlerhaft")
@@ -120,7 +121,10 @@ func load_products_from_json() -> void:
 
 	var index := 0
 
-	for product_data in products:
+	var max_products: int = min(12, products.size())
+
+	for i in range(max_products):
+		var product_data = products[i]
 
 		var x := start_x + (index % columns) * spacing_x
 		var y := start_y + int(index / columns) * spacing_y

@@ -118,5 +118,55 @@
 	"ingredients": ["Schweinefleisch", "Schweineleber", "Speck", "Kochsalz", "Gewürze", "Zucker"],
 	"allergens": [],
 	"tags": ["Glutenfrei", "Laktosefrei"]
+  },
+  {
+	"id": 13,
+	"name": "Bier",
+	"image": "Bier.png",
+	"collision_width": 80,
+	"collision_height": 60,
+	"ingredients": ["Wasser", "Gerstenmalz", "Hopfen", "Hopfenextrakt"],
+	"allergens": ["Gluten"],
+	"tags": ["Vegan", "Vegetarisch", "Laktosefrei"]
+  },
+  {
+	"id": 14,
+	"name": "Butter",
+	"image": "Butter.png",
+	"collision_width": 80,
+	"collision_height": 60,
+	"ingredients": ["Milchfett", "Wasser", "Eiweiß", "Milchzucker"],
+	"allergens": ["Laktose"],
+	"tags": ["Vegetarisch", "Glutenfrei"]
+  },
+  {
+	"id": 15,
+	"name": "Eiscreme",
+	"image": "Eiscreme.png",
+	"collision_width": 80,
+	"collision_height": 60,
+	"ingredients": ["Milch", "Sahne", "Rohrzucker", "Eigelb", "Glukosesirup", "Magermilchpulver", "Johannisbrotkernmehl", "Bourbonvanilleextrakt"],
+	"allergens": ["Laktose"],
+	"tags": ["Vegetarisch", "Glutenfrei"]
+  },
+  {
+	"id": 16,
+	"name": "Marmelade",
+	"image": "Marmelade.png",
+	"collision_width": 80,
+	"collision_height": 60,
+	"ingredients": ["Erdbeeren", "Gelierzucker"],
+	"allergens": [],
+	"tags": ["Vegan" ,"Vegetarisch", "Glutenfrei", "Laktosefrei"]
+  },
+  {
+	"id": 17,
+	"name": "Tiefkühlpizza Salami",
+	"image": "Tiefkühlpizza Salami.png",
+	"collision_width": 80,
+	"collision_height": 60,
+	"ingredients": ["Weizenmehl", "Tomaten", "Mozzarella", "Salami", "Gewürze", "Wasser", "Rapsöl", "Hefe", "Zucker"],
+	"allergens": ["Gluten", "Laktose"],
+	"tags": []
   }
 ]
