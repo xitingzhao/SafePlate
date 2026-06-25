@@ -3,14 +3,17 @@
 [ext_resource type="Script" uid="uid://bk7d4nfbigqnp" path="res://scripts/feedback_overlay.gd" id="1_dumxq"]
 
 [node name="FeedbackOverlay" type="CanvasLayer" unique_id=1924975418]
+visible = false
 script = ExtResource("1_dumxq")
 
 [node name="Panel" type="Panel" parent="." unique_id=2112077177]
+visible = false
 offset_left = 1.0
 offset_right = 169.0
 offset_bottom = 36.0
 
 [node name="Label" type="Label" parent="Panel" unique_id=1744311316]
+visible = false
 z_index = 1
 layout_mode = 0
 offset_left = 5.0

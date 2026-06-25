@@ -2,7 +2,7 @@ extends Control
 
 func _ready():
 
-	$Player1Label.text = (
+	$VBoxContainer/Player1Label.text = (
 		"Profil: %s\nRichtig: %d\nFalsch: %d"
 		% [
 			GameGlobal.player1,
@@ -11,7 +11,7 @@ func _ready():
 		]
 	)
 
-	$Player2Label.text = (
+	$VBoxContainer2/Player2Label.text = (
 		"Profil: %s\nRichtig: %d\nFalsch: %d"
 		% [
 			GameGlobal.player2,
