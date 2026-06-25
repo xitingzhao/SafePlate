@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" uid="uid://1p2pxn6yrm0g" path="res://scripts/game_scene.gd" id="1_2stm1"]
 [ext_resource type="Texture2D" uid="uid://cjo0mvofo3jab" path="res://assets/background/supermarkt hintergrund.png" id="2_b1len"]
-[ext_resource type="PackedScene" uid="uid://bvylk6y3ilt8j" path="res://scenes/agent.tscn" id="2_ldxrm"]
+[ext_resource type="PackedScene" uid="uid://cewnebifuw5xs" path="res://scenes/agent.tscn" id="2_ldxrm"]
 [ext_resource type="Texture2D" uid="uid://b7jibnj6t7cgu" path="res://assets/background/regal.png" id="3_ks7xl"]
 [ext_resource type="Texture2D" uid="uid://bpm3bvftox6vd" path="res://assets/agent_sprite_blue.png" id="3_vaave"]
 [ext_resource type="PackedScene" uid="uid://bl12hj158277" path="res://scenes/product_info.tscn" id="4_b1len"]
 [ext_resource type="PackedScene" uid="uid://c3180rqva4alq" path="res://scenes/game/FeedbackOverlay.tscn" id="5_gs0nk"]
+[ext_resource type="FontFile" uid="uid://bwguuv1ped2cn" path="res://assets/font/Brown Cookies.otf" id="8_8cups"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lfi48"]
 bg_color = Color(0.75, 0.38550004, 0.1425, 0.47843137)
@@ -31,6 +32,18 @@ bg_color = Color(0.10980392, 0.54509807, 0.81960785, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8x43h"]
 bg_color = Color(0.10980392, 0.54509807, 0.81960785, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3nyqv"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
 
 [node name="GameScene" type="Control" unique_id=551222279]
 layout_mode = 3
@@ -279,10 +292,14 @@ layout_mode = 1
 
 [node name="EndButton" type="Button" parent="." unique_id=1899263545]
 layout_mode = 0
-offset_left = 1048.0
-offset_top = 329.0
-offset_right = 1140.0
-offset_bottom = 360.0
+offset_left = 975.0
+offset_top = 298.0
+offset_right = 1102.0
+offset_bottom = 337.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_8cups")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_3nyqv")
 text = "Auswerten"
 
 [connection signal="pressed" from="EndButton" to="." method="_on_end_button_pressed"]
