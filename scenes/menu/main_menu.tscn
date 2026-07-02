@@ -45,6 +45,7 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_settings_panel"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 12
@@ -129,8 +130,6 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_bbqo6")
 text = "Einstellungen"
 
 [node name="AnleitungOverlay" type="Control" parent="." unique_id=1787785713]
-[node name="SettingsOverlay" type="ColorRect" parent="." unique_id=39771754]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -148,10 +147,6 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.5)
 
 [node name="Panel" type="PanelContainer" parent="AnleitungOverlay" unique_id=575247506]
-color = Color(0, 0, 0, 0.55)
-
-[node name="SettingsPanel" type="PanelContainer" parent="SettingsOverlay" unique_id=519699929]
-custom_minimum_size = Vector2(420, 220)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -216,9 +211,25 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_kiqgm")
 theme_override_styles/hover = SubResource("StyleBoxFlat_qgo02")
 text = "Schließen"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/AnleitungButton" to="." method="_on_anleitung_button_pressed"]
-[connection signal="pressed" from="AnleitungOverlay/Panel/VBoxContainer/CloseButton" to="." method="_on_anleitung_close_pressed"]
+[node name="SettingsOverlay" type="ColorRect" parent="." unique_id=39771754]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+color = Color(0, 0, 0, 0.55)
+
+[node name="SettingsPanel" type="PanelContainer" parent="SettingsOverlay" unique_id=519699929]
+custom_minimum_size = Vector2(420, 220)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 offset_left = -210.0
 offset_top = -110.0
 offset_right = 210.0
@@ -288,6 +299,8 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/AnleitungButton" to="." method="_on_anleitung_button_pressed"]
+[connection signal="pressed" from="AnleitungOverlay/Panel/VBoxContainer/CloseButton" to="." method="_on_anleitung_close_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/EinstellungenButton" to="." method="_on_einstellungen_button_pressed"]
 [connection signal="pressed" from="SettingsOverlay/SettingsPanel/VBoxContainer/HeaderHBox/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="value_changed" from="SettingsOverlay/SettingsPanel/VBoxContainer/VolumeHBox/VolumeSlider" to="." method="_on_volume_slider_value_changed"]
