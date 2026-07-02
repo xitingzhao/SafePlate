@@ -35,6 +35,13 @@ bg_color = Color(0.16470589, 0.40392157, 0.13333334, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bbqo6"]
 bg_color = Color(0.3019608, 0.69411767, 0.40392157, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_settings_panel"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
 [node name="MainMenu" type="Control" unique_id=1453221976]
 layout_mode = 3
 anchors_preset = 15
@@ -111,4 +118,93 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_1k4da")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bbqo6")
 text = "Einstellungen"
 
+[node name="SettingsOverlay" type="ColorRect" parent="." unique_id=39771754]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.55)
+
+[node name="SettingsPanel" type="PanelContainer" parent="SettingsOverlay" unique_id=519699929]
+custom_minimum_size = Vector2(420, 220)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -110.0
+offset_right = 210.0
+offset_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_settings_panel")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsOverlay/SettingsPanel" unique_id=2051455233]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="HeaderHBox" type="HBoxContainer" parent="SettingsOverlay/SettingsPanel/VBoxContainer" unique_id=598671837]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="SettingsOverlay/SettingsPanel/VBoxContainer/HeaderHBox" unique_id=998890079]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.2049, 0.71129906, 0.29549643, 1)
+theme_override_fonts/font = ExtResource("3_kiqgm")
+theme_override_font_sizes/font_size = 36
+text = "Einstellungen"
+horizontal_alignment = 1
+
+[node name="CloseButton" type="Button" parent="SettingsOverlay/SettingsPanel/VBoxContainer/HeaderHBox" unique_id=1101241253]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.20392157, 0.70980394, 0.29411766, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_kiqgm")
+theme_override_font_sizes/font_size = 30
+text = "✕"
+flat = true
+
+[node name="VolumeHBox" type="HBoxContainer" parent="SettingsOverlay/SettingsPanel/VBoxContainer" unique_id=2146687963]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="VolumeLabel" type="Label" parent="SettingsOverlay/SettingsPanel/VBoxContainer/VolumeHBox" unique_id=745873827]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_kiqgm")
+theme_override_font_sizes/font_size = 24
+text = "Lautstärke"
+
+[node name="VolumeSlider" type="HSlider" parent="SettingsOverlay/SettingsPanel/VBoxContainer/VolumeHBox" unique_id=749533606]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 50.0
+
+[node name="VolumeValueLabel" type="Label" parent="SettingsOverlay/SettingsPanel/VBoxContainer/VolumeHBox" unique_id=554655850]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_kiqgm")
+theme_override_font_sizes/font_size = 24
+text = "80%"
+horizontal_alignment = 2
+
+[node name="MusicCreditLabel" type="Label" parent="SettingsOverlay/SettingsPanel/VBoxContainer" unique_id=1378610331]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.4, 0.4, 1)
+theme_override_fonts/font = ExtResource("3_kiqgm")
+theme_override_font_sizes/font_size = 16
+text = "Musik: YanYuXiaoZhen (Xiaohongshu)"
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/EinstellungenButton" to="." method="_on_einstellungen_button_pressed"]
+[connection signal="pressed" from="SettingsOverlay/SettingsPanel/VBoxContainer/HeaderHBox/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="value_changed" from="SettingsOverlay/SettingsPanel/VBoxContainer/VolumeHBox/VolumeSlider" to="." method="_on_volume_slider_value_changed"]

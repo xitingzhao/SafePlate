@@ -1,8 +1,10 @@
 extends Control
 
 @onready var title: Label = $MarginContainer/VBoxContainer/GameTitle
+@onready var settings_overlay: ColorRect = $SettingsOverlay
+@onready var volume_slider: HSlider = $SettingsOverlay/SettingsPanel/VBoxContainer/VolumeHBox/VolumeSlider
+@onready var volume_value_label: Label = $SettingsOverlay/SettingsPanel/VBoxContainer/VolumeHBox/VolumeValueLabel
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	start_title_animation()
 
@@ -15,6 +17,21 @@ func start_title_animation():
 		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	tween.chain().tween_property(title, "position:y", title.position.y, float_speed)\
 		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-#Scene change from main menu to profile auswahl
 func _on_start_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/menu/profilauswahl.tscn")
+
+func _on_einstellungen_button_pressed() -> void:
+	settings_overlay.visible = true
+	var current := AudioManager.get_music_volume() * 100.0
+	volume_slider.value = current
+	_update_volume_label(current)
+
+func _on_close_button_pressed() -> void:
+	settings_overlay.visible = false
+
+func _on_volume_slider_value_changed(value: float) -> void:
+	AudioManager.set_music_volume(value / 100.0)
+	_update_volume_label(value)
+
+func _update_volume_label(value: float) -> void:
+	volume_value_label.text = "%d%%" % int(value)
