@@ -35,6 +35,17 @@ bg_color = Color(0.16470589, 0.40392157, 0.13333334, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bbqo6"]
 bg_color = Color(0.3019608, 0.69411767, 0.40392157, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_anleitung_panel"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(1, 1, 1, 0.95)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
 [node name="MainMenu" type="Control" unique_id=1453221976]
 layout_mode = 3
 anchors_preset = 15
@@ -111,4 +122,89 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_1k4da")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bbqo6")
 text = "Einstellungen"
 
+[node name="AnleitungOverlay" type="Control" parent="." unique_id=1787785713]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DimBackground" type="ColorRect" parent="AnleitungOverlay" unique_id=1960504762]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5)
+
+[node name="Panel" type="PanelContainer" parent="AnleitungOverlay" unique_id=575247506]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -340.0
+offset_top = -280.0
+offset_right = 340.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_anleitung_panel")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AnleitungOverlay/Panel" unique_id=1374241116]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="TitleLabel" type="Label" parent="AnleitungOverlay/Panel/VBoxContainer" unique_id=1540189517]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2049, 0.71129906, 0.29549643, 1)
+theme_override_fonts/font = ExtResource("3_kiqgm")
+theme_override_font_sizes/font_size = 48
+text = "Anleitung"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="AnleitungOverlay/Panel/VBoxContainer" unique_id=1933356125]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AnleitungText" type="Label" parent="AnleitungOverlay/Panel/VBoxContainer/ScrollContainer" unique_id=1244489879]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_kiqgm")
+theme_override_font_sizes/font_size = 28
+text = "Willkommen bei SafePlate!
+
+SafePlate ist ein Lernspiel über verschiedene Ernährungsweisen.
+Manche Menschen essen vegetarisch oder vegan.
+Andere vertragen kein Gluten oder keine Laktose.
+
+So spielt ihr:
+1. Jeder Spieler wählt ein Profil (vegetarisch, vegan, glutenfrei oder laktosefrei).
+2. Tippt auf ein Produkt, um die Inhaltsstoffe zu sehen.
+3. Zieht passende Produkte in den Einkaufswagen.
+4. Drückt „Beenden“, wenn ihr fertig seid.
+
+Tipp: Lest die Inhaltsstoffe genau — manchmal steckt Gluten oder Milch versteckt drin!"
+autowrap_mode = 3
+
+[node name="CloseButton" type="Button" parent="AnleitungOverlay/Panel/VBoxContainer" unique_id=947565176]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_kiqgm")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_247la")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kiqgm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qgo02")
+text = "Schließen"
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/AnleitungButton" to="." method="_on_anleitung_button_pressed"]
+[connection signal="pressed" from="AnleitungOverlay/Panel/VBoxContainer/CloseButton" to="." method="_on_anleitung_close_pressed"]

@@ -4,6 +4,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$AnleitungOverlay.hide()
 	start_title_animation()
 
 func start_title_animation():
@@ -18,3 +19,9 @@ func start_title_animation():
 #Scene change from main menu to profile auswahl
 func _on_start_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/menu/profilauswahl.tscn")
+
+func _on_anleitung_button_pressed() -> void:
+	$AnleitungOverlay.show()
+
+func _on_anleitung_close_pressed() -> void:
+	$AnleitungOverlay.hide()
