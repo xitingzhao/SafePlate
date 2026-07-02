@@ -15,9 +15,14 @@ run/main_scene="uid://dnc4tltcmhyet"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://b1ysh0yt13s1e"
+
 [autoload]
 
 GameGlobal="*res://scripts/GameGlobal.gd"
+AudioManager="*uid://dlifti5r8c32x"
 
 [display]
 
