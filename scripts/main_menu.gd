@@ -6,6 +6,7 @@ extends Control
 @onready var volume_value_label: Label = $SettingsOverlay/SettingsPanel/VBoxContainer/VolumeHBox/VolumeValueLabel
 
 func _ready() -> void:
+	$AnleitungOverlay.hide()
 	start_title_animation()
 
 func start_title_animation():
@@ -20,6 +21,11 @@ func start_title_animation():
 func _on_start_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/menu/profilauswahl.tscn")
 
+func _on_anleitung_button_pressed() -> void:
+	$AnleitungOverlay.show()
+
+func _on_anleitung_close_pressed() -> void:
+	$AnleitungOverlay.hide()
 func _on_einstellungen_button_pressed() -> void:
 	settings_overlay.visible = true
 	var current := AudioManager.get_music_volume() * 100.0
