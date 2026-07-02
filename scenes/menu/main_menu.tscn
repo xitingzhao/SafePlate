@@ -80,6 +80,7 @@ text = "SafePlate"
 horizontal_alignment = 1
 
 [node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=429060718]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_kiqgm")
@@ -90,6 +91,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_isoef")
 text = "Starten"
 
 [node name="AnleitungButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1908824584]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_kiqgm")
