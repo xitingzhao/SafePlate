@@ -75,29 +75,34 @@ theme_override_colors/font_color = Color(0.2049, 0.71129906, 0.29549643, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("3_kiqgm")
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 200
 text = "SafePlate"
 horizontal_alignment = 1
 
 [node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=429060718]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_kiqgm")
+theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_hj162")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xn6kt")
 theme_override_styles/hover = SubResource("StyleBoxFlat_isoef")
 text = "Starten"
 
 [node name="AnleitungButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1908824584]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_kiqgm")
+theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_247la")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_kiqgm")
 theme_override_styles/hover = SubResource("StyleBoxFlat_qgo02")
 text = "Anleitung"
 
 [node name="EinstellungenButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1515930531]
+visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_kiqgm")
