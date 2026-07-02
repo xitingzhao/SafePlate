@@ -173,6 +173,7 @@ texture = ExtResource("3_ks7xl")
 expand_mode = 1
 
 [node name="shelfiltlelabel" type="Label" parent="ShelfArea" unique_id=545811429]
+visible = false
 layout_mode = 0
 offset_left = 478.0
 offset_top = 1.0
@@ -286,8 +287,8 @@ rotation = 3.107037
 scale = Vector2(0.25, 0.25)
 
 [node name="ProductInfo" parent="." unique_id=1250334183 instance=ExtResource("4_b1len")]
-layout_mode = 1
 z_index = 50
+layout_mode = 1
 
 [node name="FeedbackOverlay" parent="." unique_id=1924975418 instance=ExtResource("5_gs0nk")]
 
