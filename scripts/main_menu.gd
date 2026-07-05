@@ -28,7 +28,7 @@ func _on_anleitung_close_pressed() -> void:
 	$AnleitungOverlay.hide()
 func _on_einstellungen_button_pressed() -> void:
 	settings_overlay.visible = true
-	var current := AudioManager.get_music_volume() * 100.0
+	var current: float = AudioManager.get_music_volume() * 100.0
 	volume_slider.value = current
 	_update_volume_label(current)
 
